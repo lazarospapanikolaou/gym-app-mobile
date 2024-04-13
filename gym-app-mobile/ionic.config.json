@@ -1,5 +1,7 @@
 {
-  "name": "ionic-app-base",
-  "integrations": {},
+  "name": "gym-app-mobile",
+  "integrations": {
+    "capacitor": {}
+  },
   "type": "angular-standalone"
 }
