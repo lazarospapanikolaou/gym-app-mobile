@@ -1,4 +1,4 @@
-<div class="ion-padding" id="outerContainer">
+<div id="outerContainer">
   <div #track class="track_drag animate">
     <div #dragItem id="item"></div>
     <p #end class="track_text track_text--end animate">Confirmed</p>
@@ -8,3 +8,16 @@
     </p>
   </div>
 </div>
+
+<ion-alert
+  trigger="present-alert"
+  header="A Short Title Is Best"
+  subHeader="A Sub Header Is Optional"
+  message="A message should be a short, complete sentence."
+  [buttons]="alertButtons"
+  [isOpen]="openAlert"
+  (didDismiss)="setOpen(false)"
+>
+  <ion-icon name="thumbs-up-outline"></ion-icon>
+  <ion-icon name="thumbs-down-outline"></ion-icon>
+</ion-alert>

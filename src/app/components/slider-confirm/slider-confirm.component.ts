@@ -5,6 +5,7 @@ import {
   OnInit,
   ViewChild,
 } from '@angular/core';
+import { IonAlert, IonIcon } from '@ionic/angular/standalone';
 
 export
 @Component({
@@ -12,6 +13,7 @@ export
   templateUrl: './slider-confirm.component.html',
   styleUrls: ['./slider-confirm.component.scss'],
   standalone: true,
+  imports: [IonAlert, IonIcon],
 })
 class SliderConfirmComponent implements OnInit, AfterViewInit {
   @ViewChild('dragItem') dragItem!: ElementRef;
@@ -24,6 +26,8 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   currentX!: number;
   initialX!: number;
   xOffset: number;
+  openAlert: boolean = false;
+  alertButtons = ['Action'];
 
   constructor() {
     this.active = false;
@@ -90,8 +94,6 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
     if (this.currentX < this.dragWidth) {
       this.animateBack();
     } else {
-      console.log(this.currentX);
-      console.log(this.dragWidth);
       this.completed();
     }
 
@@ -152,6 +154,10 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
     this.end.nativeElement.style.opacity = 1;
     this.after.nativeElement.style.opacity = 0;
     this.before.nativeElement.style.opacity = 0;
-    alert('Confirmed!');
+    this.openAlert = true;
   };
+
+  setOpen(isOpen: boolean) {
+    this.openAlert = isOpen;
+  }
 }
