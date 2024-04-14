@@ -74,7 +74,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
     this.dragWidth =
       this.container?.nativeElement.clientWidth -
       this.dragItem?.nativeElement.clientWidth -
-      20;
+      7;
     if (e.type === 'touchstart') {
       this.initialX = e.touches[0].clientX - this.xOffset;
     } else {
@@ -87,7 +87,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   };
 
   dragEnd = (e: any) => {
-    if (this.currentX < this.dragWidth - 20) {
+    if (this.currentX < this.dragWidth) {
       this.animateBack();
     } else {
       console.log(this.currentX);
