@@ -1,4 +1,10 @@
-import { Component, ElementRef, OnInit, ViewChild } from '@angular/core';
+import {
+  AfterViewInit,
+  Component,
+  ElementRef,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 export
 @Component({
@@ -7,7 +13,7 @@ export
   styleUrls: ['./slider-confirm.component.scss'],
   standalone: true,
 })
-class SliderConfirmComponent implements OnInit {
+class SliderConfirmComponent implements OnInit, AfterViewInit {
   @ViewChild('dragItem') dragItem!: ElementRef;
   @ViewChild('track') container!: ElementRef;
   @ViewChild('before') before!: ElementRef;
@@ -24,11 +30,10 @@ class SliderConfirmComponent implements OnInit {
     this.xOffset = 0;
   }
 
-  ngOnInit() {
+  ngAfterViewInit(): void {
     this.dragWidth =
       this.container?.nativeElement.clientWidth -
-      this.dragItem?.nativeElement.clientWidth -
-      20;
+      this.dragItem?.nativeElement.clientWidth;
 
     this.container?.nativeElement.addEventListener(
       'touchstart',
@@ -63,6 +68,8 @@ class SliderConfirmComponent implements OnInit {
     );
   }
 
+  ngOnInit() {}
+
   dragStart = (e: any) => {
     this.dragWidth =
       this.container?.nativeElement.clientWidth -
@@ -80,9 +87,11 @@ class SliderConfirmComponent implements OnInit {
   };
 
   dragEnd = (e: any) => {
-    if (this.currentX < this.dragWidth - 5) {
+    if (this.currentX < this.dragWidth - 20) {
       this.animateBack();
     } else {
+      console.log(this.currentX);
+      console.log(this.dragWidth);
       this.completed();
     }
 
@@ -136,7 +145,7 @@ class SliderConfirmComponent implements OnInit {
       this.container.nativeElement.classList.toggle('animate');
       this.before.nativeElement.classList.toggle('animate');
       this.after.nativeElement.classList.toggle('animate');
-    }, 600);
+    }, 500);
   };
 
   completed = () => {

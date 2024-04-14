@@ -1,9 +1,9 @@
 .track_drag {
-  width: 98.5%;
-  height: 130px;
+  width: 100%;
+  height: 60px;
   display: flex;
   align-items: center;
-  position: absolute;
+  position: relative;
   overflow: hidden;
   border-radius: 7px;
   touch-action: none;
@@ -11,16 +11,16 @@
 }
 
 #item {
-  width: 150px;
-  height: calc(100% - 10px * 2 - 2px);
+  width: 18%;
+  height: 90%;
   justify-self: flex-start;
   background-color: rgb(245, 230, 99);
-  border: 10px solid rgba(136, 136, 136, 0.5);
-  border-radius: 20px;
+  border: 2px solid rgba(136, 136, 136, 0.5);
+  border-radius: 7px;
   touch-action: none;
   user-select: none;
   z-index: 999;
-  margin: 11px 1px;
+  margin: 2px 2px;
   background-size: 40% 40%;
   background-repeat: no-repeat;
   background-position: center;
