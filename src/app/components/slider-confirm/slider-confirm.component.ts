@@ -2,6 +2,7 @@ import {
   AfterViewInit,
   Component,
   ElementRef,
+  Input,
   OnInit,
   ViewChild,
 } from '@angular/core';
@@ -16,6 +17,7 @@ export
   imports: [IonAlert, IonIcon],
 })
 class SliderConfirmComponent implements OnInit, AfterViewInit {
+  @Input() title!: string;
   @ViewChild('dragItem') dragItem!: ElementRef;
   @ViewChild('track') container!: ElementRef;
   @ViewChild('before') before!: ElementRef;
@@ -27,7 +29,42 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   initialX!: number;
   xOffset: number;
   openAlert: boolean = false;
-  alertButtons = ['Action'];
+  alertButtons = [
+    {
+      text: '1',
+      handler: (data: any) => {
+        const thumbsupButton = document.querySelector('.thumbs-up');
+        const thumbsdownButton = document.querySelector('.thumbs-down');
+
+        thumbsdownButton?.classList.remove('selected-rating'); // remove selected class from all siblings
+        thumbsupButton?.classList.add('selected-rating'); // add selected class to currently selected item
+        return false;
+      }, // prevents from closing the alert
+      cssClass: 'rate-icon-button thumbs-up',
+    },
+    {
+      text: '2',
+      handler: (data: any) => {
+        const thumbsupButton = document.querySelector('.thumbs-up');
+        const thumbsdownButton = document.querySelector('.thumbs-down');
+
+        thumbsupButton?.classList.remove('selected-rating'); // remove selected class from all siblings
+        thumbsdownButton?.classList.add('selected-rating'); // add selected class to currently selected item
+        return false;
+      }, // prevents from closing the alert
+      cssClass: 'rate-icon-button thumbs-down',
+    },
+    {
+      text: 'Later',
+      handler: (data: any) => this.submitLater(data),
+      cssClass: 'rate-action-button rate-later',
+    },
+    {
+      text: 'Submit',
+      handler: (data: any) => this.submitNow(data),
+      cssClass: 'rate-action-button rate-now',
+    },
+  ];
 
   constructor() {
     this.active = false;
@@ -73,6 +110,18 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   }
 
   ngOnInit() {}
+
+  submitLater(event: any) {
+    console.log('Submit Later');
+  }
+
+  submitNow(event: any) {
+    console.log('Submitted');
+  }
+
+  selectedRatingHandler = (event: any) => {
+    // handler for clicked rating icon button
+  };
 
   dragStart = (e: any) => {
     this.dragWidth =

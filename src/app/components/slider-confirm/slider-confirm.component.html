@@ -10,14 +10,10 @@
 </div>
 
 <ion-alert
-  trigger="present-alert"
-  header="A Short Title Is Best"
-  subHeader="A Sub Header Is Optional"
-  message="A message should be a short, complete sentence."
+  [header]="title"
+  message="Did you like that exercise?"
   [buttons]="alertButtons"
   [isOpen]="openAlert"
   (didDismiss)="setOpen(false)"
 >
-  <ion-icon name="thumbs-up-outline"></ion-icon>
-  <ion-icon name="thumbs-down-outline"></ion-icon>
 </ion-alert>
