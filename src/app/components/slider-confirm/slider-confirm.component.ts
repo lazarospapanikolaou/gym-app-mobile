@@ -7,6 +7,8 @@ import {
   ViewChild,
 } from '@angular/core';
 import { IonAlert, IonIcon } from '@ionic/angular/standalone';
+import { addIcons } from 'ionicons';
+import { thumbsDownOutline, thumbsUpOutline } from 'ionicons/icons';
 
 export
 @Component({
@@ -32,6 +34,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   alertButtons = [
     {
       text: '1',
+      id: 'thumbsUp',
       handler: (data: any) => {
         const thumbsupButton = document.querySelector('.thumbs-up');
         const thumbsdownButton = document.querySelector('.thumbs-down');
@@ -44,6 +47,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
     },
     {
       text: '2',
+      id: 'thumbsDown',
       handler: (data: any) => {
         const thumbsupButton = document.querySelector('.thumbs-up');
         const thumbsdownButton = document.querySelector('.thumbs-down');
@@ -69,6 +73,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   constructor() {
     this.active = false;
     this.xOffset = 0;
+    addIcons({ thumbsUpOutline, thumbsDownOutline }); // you are missing addIcons Import
   }
 
   ngAfterViewInit(): void {
@@ -107,6 +112,10 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
       this.drag,
       false
     );
+
+    const thumbsUp = document.getElementById('thumbsUp');
+    const thumbsDown = document.getElementById('thumbsDown');
+    console.log(thumbsDown, thumbsUp);
   }
 
   ngOnInit() {}
