@@ -1,0 +1,20 @@
+<div id="outerContainer">
+  <ion-icon name="thumbs-up-outline"></ion-icon>
+  <div #track class="track_drag animate">
+    <div #dragItem id="item"></div>
+    <p #end class="track_text track_text--end animate">Confirmed</p>
+    <p #after class="track_text track_text--after animate">Confirming...</p>
+    <p #before class="track_text track_text--before animate">
+      Slide to Confirm
+    </p>
+  </div>
+</div>
+
+<ion-alert
+  [header]="title"
+  message="Did you like that exercise?"
+  [buttons]="alertButtons"
+  [isOpen]="openAlert"
+  (didDismiss)="setOpen(false)"
+>
+</ion-alert>
