@@ -66,10 +66,21 @@
     opacity 0.5s ease-in, background-color 0.5s ease-in;
 }
 
-ion-alert button.thumbs-up.alert-button {
-  background-image: url("../../../assets/shapes.svg");
+#my-alert div.alert-button-group {
+  display: flex;
+  flex-direction: row;
 }
 
-ion-alert button.thumbs-down.alert-button {
+#my-alert div.alert-button-group #thumbs-up {
+  background-image: url("../../../assets/shapes.svg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#my-alert div.alert-button-group #thumbs-down {
   background-image: url("../../../assets/icon/favicon.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
 }

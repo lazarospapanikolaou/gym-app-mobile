@@ -33,7 +33,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   openAlert: boolean = false;
   alertButtons = [
     {
-      text: '1',
+      text: '',
       id: 'thumbsUp',
       handler: (data: any) => {
         const thumbsupButton = document.querySelector('.thumbs-up');
@@ -46,7 +46,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
       cssClass: 'rate-icon-button thumbs-up',
     },
     {
-      text: '2',
+      text: '',
       id: 'thumbsDown',
       handler: (data: any) => {
         const thumbsupButton = document.querySelector('.thumbs-up');
