@@ -1,3 +1,5 @@
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
+/* eslint-disable @angular-eslint/component-selector */
 import {
   AfterViewInit,
   Component,
