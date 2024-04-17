@@ -1,0 +1,12 @@
+<ion-list>
+  <ion-item
+    *ngFor="let program of myPrograms"
+    (click)="goToExercise(program.id)"
+  >
+    <ion-label>{{ program.gym }}</ion-label>
+    <div>
+      <ion-label>{{ program.exercises }} exercises</ion-label>
+      <ion-label>{{ program.estimatedTime }} m</ion-label>
+    </div>
+  </ion-item>
+</ion-list>

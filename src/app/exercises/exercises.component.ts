@@ -1,0 +1,56 @@
+import { CommonModule } from '@angular/common';
+import { Component } from '@angular/core';
+import { ActivatedRoute, Router } from '@angular/router';
+import {
+  IonList,
+  IonItem,
+  IonLabel,
+  IonBackButton,
+  IonButtons,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from '@ionic/angular/standalone';
+
+@Component({
+  selector: 'app-exercises',
+  templateUrl: './exercises.component.html',
+  styleUrls: ['./exercises.component.scss'],
+  standalone: true,
+  imports: [
+    IonList,
+    IonItem,
+    IonLabel,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+    CommonModule,
+    IonBackButton,
+    IonButtons,
+  ],
+})
+export class ExercisesComponent {
+  exercises: any = [];
+  id!: number;
+
+  constructor(private route: ActivatedRoute, private router: Router) {
+    this.exercises.push(
+      { id: 1, title: 'Biseps', estimatedTime: 20 },
+      { id: 2, title: 'Legs', estimatedTime: 30 },
+      { id: 3, title: 'Chest', estimatedTime: 40 }
+    );
+  }
+
+  ngOnInit() {
+    this.route.queryParams.subscribe((params: any) => {
+      this.id = params.id;
+      console.log(this.id);
+    });
+  }
+
+  goToExercise(id: number) {
+    this.router.navigate(['/tabs/tab1/exercises'], { queryParams: { id: id } });
+  }
+}

@@ -1,7 +1,22 @@
-<div class="ion-padding">
-  <p>
-    This is an exercise to strength your upper muscles. Follow the instruction
-    below to complete it: 1. ..... 2. ..... 3. .....
-  </p>
-  <component-slider-confirm title="Exercise 1"></component-slider-confirm>
-</div>
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Exercise </ion-title>
+    <ion-back-button></ion-back-button>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Exercise</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="ion-padding">
+    <p>
+      This is an exercise to strength your upper muscles. Follow the instruction
+      below to complete it: 1. ..... 2. ..... 3. .....
+    </p>
+    <component-slider-confirm title="Exercise 1"></component-slider-confirm>
+  </div>
+</ion-content>
