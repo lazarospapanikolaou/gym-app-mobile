@@ -11,6 +11,9 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
+  IonCol,
+  IonRow,
+  IonGrid,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -29,6 +32,9 @@ import {
     CommonModule,
     IonBackButton,
     IonButtons,
+    IonCol,
+    IonRow,
+    IonGrid,
   ],
 })
 export class ExercisesComponent {

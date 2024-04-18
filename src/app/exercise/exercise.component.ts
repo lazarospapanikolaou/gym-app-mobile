@@ -5,6 +5,9 @@ import {
   IonTitle,
   IonContent,
   IonBackButton,
+  IonCol,
+  IonRow,
+  IonGrid,
 } from '@ionic/angular/standalone';
 import { SliderConfirmComponent } from '../components/slider-confirm/slider-confirm.component';
 import { ActivatedRoute } from '@angular/router';
@@ -20,6 +23,9 @@ import { ActivatedRoute } from '@angular/router';
     IonContent,
     SliderConfirmComponent,
     IonBackButton,
+    IonCol,
+    IonRow,
+    IonGrid,
   ],
   standalone: true,
 })
