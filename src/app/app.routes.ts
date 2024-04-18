@@ -8,11 +8,11 @@ export const routes: Routes = [
     loadChildren: () => import('./tabs/tabs.routes').then((m) => m.routes),
   },
   {
-    path: 'tabs/tab1/programs',
+    path: 'tabs/programs/program',
     component: ExercisesComponent,
   },
   {
-    path: 'tabs/tab1/exercises',
+    path: 'tabs/programs/exercise',
     component: ExerciseComponent,
   },
 ];

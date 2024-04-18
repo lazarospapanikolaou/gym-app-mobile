@@ -1,14 +1,31 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
-import { IonList, IonItem, IonLabel } from '@ionic/angular/standalone';
+import {
+  IonList,
+  IonItem,
+  IonLabel,
+  IonHeader,
+  IonToolbar,
+  IonTitle,
+  IonContent,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-programs',
   templateUrl: './programs.component.html',
   styleUrls: ['./programs.component.scss'],
   standalone: true,
-  imports: [IonList, IonItem, IonLabel, CommonModule],
+  imports: [
+    IonList,
+    IonItem,
+    IonLabel,
+    CommonModule,
+    IonHeader,
+    IonToolbar,
+    IonTitle,
+    IonContent,
+  ],
 })
 export class ProgramsComponent {
   myPrograms: any = [];
@@ -25,6 +42,8 @@ export class ProgramsComponent {
 
   goToExercise(id: number) {
     console.log(id);
-    this.router.navigate(['/tabs/tab1/programs'], { queryParams: { id: id } });
+    this.router.navigate(['/tabs/programs/program'], {
+      queryParams: { id: id },
+    });
   }
 }

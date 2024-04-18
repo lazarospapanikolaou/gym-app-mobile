@@ -51,6 +51,8 @@ export class ExercisesComponent {
   }
 
   goToExercise(id: number) {
-    this.router.navigate(['/tabs/tab1/exercises'], { queryParams: { id: id } });
+    this.router.navigate(['/tabs/programs/exercise'], {
+      queryParams: { id: id },
+    });
   }
 }
