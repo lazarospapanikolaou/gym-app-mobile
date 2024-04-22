@@ -82,7 +82,7 @@
       },
       {
         "file": "angular.json",
-        "hash": "12969286899641019713"
+        "hash": "5598287802358265742"
       },
       {
         "file": "capacitor.config.ts",
@@ -113,16 +113,12 @@
         "hash": "3244421341483603138"
       },
       {
-        "file": "src/app/app.component.spec.ts",
-        "hash": "9669548517498440252"
-      },
-      {
         "file": "src/app/app.component.ts",
         "hash": "9286534991027421385"
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "7380920990600614150"
+        "hash": "11805653815000398478"
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.html",
@@ -134,7 +130,7 @@
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.ts",
-        "hash": "7167259318266204492"
+        "hash": "5338877228563725623"
       },
       {
         "file": "src/app/exercise/exercise.component.html",
@@ -177,6 +173,34 @@
         "hash": "8529170809699812881"
       },
       {
+        "file": "src/app/pages/login/login.page.html",
+        "hash": "7523216317554478793"
+      },
+      {
+        "file": "src/app/pages/login/login.page.scss",
+        "hash": "9033356271377953058"
+      },
+      {
+        "file": "src/app/pages/login/login.page.ts",
+        "hash": "13549096201525394582"
+      },
+      {
+        "file": "src/app/pages/register/register.page.html",
+        "hash": "6706539757103475352"
+      },
+      {
+        "file": "src/app/pages/register/register.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/pages/register/register.page.spec.ts",
+        "hash": "13426859514433462653"
+      },
+      {
+        "file": "src/app/pages/register/register.page.ts",
+        "hash": "9943972048184842235"
+      },
+      {
         "file": "src/app/programs/programs.component.html",
         "hash": "1340714993168165815"
       },
@@ -187,6 +211,10 @@
       {
         "file": "src/app/programs/programs.component.ts",
         "hash": "11032942683432750643"
+      },
+      {
+        "file": "src/app/shared/shared.module.ts",
+        "hash": "9699282314917819236"
       },
       {
         "file": "src/app/tab2/tab2.page.html",
