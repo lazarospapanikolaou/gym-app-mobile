@@ -35,8 +35,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   openAlert: boolean = false;
   alertButtons = [
     {
-      text: '1',
-      id: 'thumbsUp',
+      text: '',
       handler: (data: any) => {
         const thumbsupButton = document.querySelector('.thumbs-up');
         const thumbsdownButton = document.querySelector('.thumbs-down');
@@ -45,11 +44,10 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
         thumbsupButton?.classList.add('selected-rating'); // add selected class to currently selected item
         return false;
       }, // prevents from closing the alert
-      cssClass: 'rate-icon-button thumbs-up',
+      cssClass: 'thumbs-up',
     },
     {
-      text: '2',
-      id: 'thumbsDown',
+      text: '',
       handler: (data: any) => {
         const thumbsupButton = document.querySelector('.thumbs-up');
         const thumbsdownButton = document.querySelector('.thumbs-down');
@@ -58,18 +56,18 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
         thumbsdownButton?.classList.add('selected-rating'); // add selected class to currently selected item
         return false;
       }, // prevents from closing the alert
-      cssClass: 'rate-icon-button thumbs-down',
+      cssClass: 'thumbs-down',
     },
-    {
-      text: 'Later',
-      handler: (data: any) => this.submitLater(data),
-      cssClass: 'rate-action-button rate-later',
-    },
-    {
-      text: 'Submit',
-      handler: (data: any) => this.submitNow(data),
-      cssClass: 'rate-action-button rate-now',
-    },
+    // {
+    //   text: 'Later',
+    //   handler: (data: any) => this.submitLater(data),
+    //   cssClass: 'rate-later',
+    // },
+    // {
+    //   text: 'Submit',
+    //   handler: (data: any) => this.submitNow(data),
+    //   cssClass: 'rate-now',
+    // },
   ];
 
   constructor() {

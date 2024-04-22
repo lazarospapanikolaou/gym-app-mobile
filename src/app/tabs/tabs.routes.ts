@@ -1,5 +1,8 @@
 import { Routes } from '@angular/router';
 import { TabsPage } from './tabs.page';
+import { ExercisesComponent } from '../exercises/exercises.component';
+import { ExerciseComponent } from '../exercise/exercise.component';
+import { ProgramsComponent } from '../programs/programs.component';
 
 export const routes: Routes = [
   {
@@ -7,9 +10,28 @@ export const routes: Routes = [
     component: TabsPage,
     children: [
       {
-        path: 'tab1',
+        path: 'programs',
+        // component: ProgramsComponent,
         loadComponent: () =>
-          import('../tab1/tab1.page').then((m) => m.Tab1Page),
+          import('../programs/programs.component').then(
+            (m) => m.ProgramsComponent
+          ),
+      },
+      {
+        path: 'programs/program',
+        loadComponent: () =>
+          import('../exercises/exercises.component').then(
+            (m) => m.ExercisesComponent
+          ),
+        // component: ExercisesComponent,
+      },
+      {
+        path: 'programs/exercise',
+        loadComponent: () =>
+          import('../exercise/exercise.component').then(
+            (m) => m.ExerciseComponent
+          ),
+        // component: ExerciseComponent,
       },
       {
         path: 'tab2',
@@ -23,14 +45,14 @@ export const routes: Routes = [
       },
       {
         path: '',
-        redirectTo: '/tabs/tab1',
+        redirectTo: '/tabs/programs',
         pathMatch: 'full',
       },
     ],
   },
   {
     path: '',
-    redirectTo: '/tabs/tab1',
+    redirectTo: '/tabs/programs',
     pathMatch: 'full',
   },
 ];
