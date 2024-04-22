@@ -1,29 +1,61 @@
-ion-content{
-    --ion-background-color:#E1EAF9 !important;
-}
+// .content-wrapper {
+//   top: 100px;
+//   left: 0;
+//   right: 0;
+//   bottom: 0;
+//   margin: 0 auto;
+// }
 
-ion-header{
-    position: absolute;
-}
+// ion-list {
+//   ion-item {
+//     --border-radius: 20px;
+//     --background: var(--ion-color-light);
+//     --inner-padding-end: 20px;
 
-ion-toolbar{
-    --ion-background-color: transparent;
-    --opacity:0;
-}
+//     ion-icon {
+//       padding: 0px 10px;
+//       margin-right: unset;
+//     }
+//   }
+// }
 
-ion-header{
-    position: absolute;
-}
+// .inner-wrapper {
+//   margin-top: 3rem;
+// }
 
-.signin-btns {
-    margin-top:25px;
-    text-align:center;
-}
+// .noLink {
+//   text-decoration: none;
+//   margin-top: 1rem;
+// }
 
-.loginbtn{
-    --ion-color-primary:#215AB7;
-}
 
-.registerbtn{
-    --ion-color-primary:#215AB7;
-}
+.content-wrapper {
+    top: 100px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    margin: 0 auto;
+  }
+  
+  ion-list {
+    ion-item {
+      --border-radius: 20px;
+      --background: var(--ion-color-light);
+      --inner-padding-end: 20px;
+  
+      ion-icon {
+        padding: 0px 10px;
+        margin-right: unset;
+      }
+    }
+  }
+  
+  .inner-wrapper {
+    margin-top: 3rem;
+  }
+  
+  .noLink {
+    text-decoration: none;
+    margin-top: 1rem;
+  }
+  
