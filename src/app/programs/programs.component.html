@@ -13,11 +13,7 @@
 
   <ion-grid>
     <ion-row>
-      <ion-col
-        size="6"
-        *ngFor="let program of myPrograms"
-        (click)="goToExercise(program.id)"
-      >
+      <ion-col size="6" *ngFor="let program of myPrograms">
         <ion-card>
           <ion-card-content>
             <ion-grid>
@@ -36,7 +32,9 @@
               </ion-row>
               <ion-row>
                 <ion-col class="center">
-                  <ion-button shape="round">Enroll</ion-button>
+                  <ion-button (click)="goToExercise(program.id)" shape="round"
+                    >Enroll</ion-button
+                  >
                 </ion-col>
               </ion-row>
             </ion-grid>

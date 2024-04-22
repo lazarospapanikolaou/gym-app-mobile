@@ -18,6 +18,7 @@ import {
   IonCardContent,
 } from '@ionic/angular/standalone';
 import { ExerciseComponent } from '../exercise/exercise.component';
+import { SliderConfirmComponent } from '../components/slider-confirm/slider-confirm.component';
 
 @Component({
   selector: 'app-exercises',
@@ -41,6 +42,7 @@ import { ExerciseComponent } from '../exercise/exercise.component';
     IonCard,
     IonCardContent,
     ExerciseComponent,
+    SliderConfirmComponent,
   ],
 })
 export class ExercisesComponent {

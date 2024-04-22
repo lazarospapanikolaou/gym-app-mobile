@@ -112,20 +112,13 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
       this.drag,
       false
     );
-
-    const thumbsUp = document.getElementById('thumbsUp');
-    const thumbsDown = document.getElementById('thumbsDown');
-   
   }
 
   ngOnInit() {}
 
-  submitLater(event: any) {
-   
-  }
+  submitLater(event: any) {}
 
-  submitNow(event: any) {
-  }
+  submitNow(event: any) {}
 
   selectedRatingHandler = (event: any) => {
     // handler for clicked rating icon button
