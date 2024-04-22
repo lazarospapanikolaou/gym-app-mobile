@@ -118,11 +118,11 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "2487202934771395914"
+        "hash": "9286534991027421385"
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "3797331477349339925"
+        "hash": "7380920990600614150"
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.html",
@@ -138,27 +138,27 @@
       },
       {
         "file": "src/app/exercise/exercise.component.html",
-        "hash": "8748784450864880479"
+        "hash": "5681013315453758225"
       },
       {
         "file": "src/app/exercise/exercise.component.scss",
-        "hash": "3244421341483603138"
+        "hash": "4259797393763469547"
       },
       {
         "file": "src/app/exercise/exercise.component.ts",
-        "hash": "815989592516875586"
+        "hash": "15937375143309695300"
       },
       {
         "file": "src/app/exercises/exercises.component.html",
-        "hash": "17711783787112014258"
+        "hash": "9140663329490481331"
       },
       {
         "file": "src/app/exercises/exercises.component.scss",
-        "hash": "3244421341483603138"
+        "hash": "13451150967151684218"
       },
       {
         "file": "src/app/exercises/exercises.component.ts",
-        "hash": "18285706322948622498"
+        "hash": "16904511776127538574"
       },
       {
         "file": "src/app/explore-container/explore-container.component.html",
@@ -178,15 +178,15 @@
       },
       {
         "file": "src/app/programs/programs.component.html",
-        "hash": "6814815231999273082"
+        "hash": "1340714993168165815"
       },
       {
         "file": "src/app/programs/programs.component.scss",
-        "hash": "3244421341483603138"
+        "hash": "16514410407185668227"
       },
       {
         "file": "src/app/programs/programs.component.ts",
-        "hash": "7479251107913428238"
+        "hash": "11032942683432750643"
       },
       {
         "file": "src/app/tab2/tab2.page.html",
@@ -238,7 +238,7 @@
       },
       {
         "file": "src/app/tabs/tabs.routes.ts",
-        "hash": "3052343606927908732"
+        "hash": "7142375119040245761"
       },
       {
         "file": "src/assets/icon/favicon.png",
