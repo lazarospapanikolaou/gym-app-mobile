@@ -1,3 +1,5 @@
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
+/* eslint-disable @angular-eslint/component-selector */
 import {
   AfterViewInit,
   Component,
@@ -113,17 +115,16 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
 
     const thumbsUp = document.getElementById('thumbsUp');
     const thumbsDown = document.getElementById('thumbsDown');
-    console.log(thumbsDown, thumbsUp);
+   
   }
 
   ngOnInit() {}
 
   submitLater(event: any) {
-    console.log('Submit Later');
+   
   }
 
   submitNow(event: any) {
-    console.log('Submitted');
   }
 
   selectedRatingHandler = (event: any) => {
