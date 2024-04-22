@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
 import { Validators,FormBuilder, FormGroup, AbstractControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { Router } from '@angular/router';
 import { IonIcon, IonButton, IonCol, IonRow, IonGrid, IonNote, IonInput, IonItem, IonList, IonHeader, IonCardSubtitle, IonToolbar, IonCardContent, IonCardHeader, IonContent, IonCard, IonCardTitle } from '@ionic/angular/standalone';
 
 @Component({
@@ -30,6 +31,7 @@ export class LoginPage implements OnInit {
 
   constructor(
     private fb: FormBuilder,
+    private router: Router
   ) { }
 
   get email(): AbstractControl | null {
@@ -52,8 +54,18 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    console.log('I AM IN LOGIN')
-    
+    const testEmail = 'test@test.com';
+    const testPassword = '1234';
+
+    const enteredEmail = this.email?.value;
+    const enteredPassword = this.password?.value;
+
+    if (enteredEmail === testEmail && enteredPassword === testPassword) {
+      console.log('Authentication successful')
+      this.router.navigate(['/tabs'])
+    } else {
+      console.log('Authentication failed. Please check your email and password.')
+    }
   }
 
 }
