@@ -2,21 +2,65 @@
 import { CommonModule } from '@angular/common';
 import { Component, OnInit } from '@angular/core';
 
-import { Validators,FormBuilder, FormGroup, AbstractControl, FormsModule, ReactiveFormsModule } from '@angular/forms';
+import {
+  Validators,
+  FormBuilder,
+  FormGroup,
+  AbstractControl,
+  FormsModule,
+  ReactiveFormsModule,
+} from '@angular/forms';
 import { Router } from '@angular/router';
-import { IonIcon, IonButton, IonCol, IonRow, IonGrid, IonNote, IonInput, IonItem, IonList, IonHeader, IonCardSubtitle, IonToolbar, IonCardContent, IonCardHeader, IonContent, IonCard, IonCardTitle } from '@ionic/angular/standalone';
+import {
+  IonIcon,
+  IonButton,
+  IonCol,
+  IonRow,
+  IonGrid,
+  IonNote,
+  IonInput,
+  IonItem,
+  IonList,
+  IonHeader,
+  IonCardSubtitle,
+  IonToolbar,
+  IonCardContent,
+  IonCardHeader,
+  IonContent,
+  IonCard,
+  IonCardTitle,
+} from '@ionic/angular/standalone';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.page.html',
   styleUrls: ['./login.page.scss'],
   standalone: true,
-  imports: [CommonModule,ReactiveFormsModule ,FormsModule ,IonCardTitle, IonCard, IonContent, IonCardHeader, IonCardContent, IonToolbar, IonCardSubtitle, IonHeader, IonIcon, IonButton, IonCol, IonRow, IonGrid, IonNote, IonInput, IonItem, IonList, ]
+  imports: [
+    CommonModule,
+    ReactiveFormsModule,
+    FormsModule,
+    IonCardTitle,
+    IonCard,
+    IonContent,
+    IonCardHeader,
+    IonCardContent,
+    IonToolbar,
+    IonCardSubtitle,
+    IonHeader,
+    IonIcon,
+    IonButton,
+    IonCol,
+    IonRow,
+    IonGrid,
+    IonNote,
+    IonInput,
+    IonItem,
+    IonList,
+  ],
 })
 export class LoginPage implements OnInit {
-
   showPassword = false;
-
 
   loginForm: FormGroup = this.fb.group({
     email: [
@@ -29,10 +73,7 @@ export class LoginPage implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(
-    private fb: FormBuilder,
-    private router: Router
-  ) { }
+  constructor(private fb: FormBuilder, private router: Router) {}
 
   get email(): AbstractControl | null {
     return this.loginForm.get('email');
@@ -50,8 +91,7 @@ export class LoginPage implements OnInit {
     this.showPassword = !this.showPassword;
   }
 
-  ngOnInit() {
-  }
+  ngOnInit() {}
 
   login() {
     const testEmail = 'test@test.com';
@@ -61,11 +101,12 @@ export class LoginPage implements OnInit {
     const enteredPassword = this.password?.value;
 
     if (enteredEmail === testEmail && enteredPassword === testPassword) {
-      console.log('Authentication successful')
-      this.router.navigate(['/tabs'])
+      console.log('Authentication successful');
+      this.router.navigate(['/']);
     } else {
-      console.log('Authentication failed. Please check your email and password.')
+      console.log(
+        'Authentication failed. Please check your email and password.'
+      );
     }
   }
-
 }

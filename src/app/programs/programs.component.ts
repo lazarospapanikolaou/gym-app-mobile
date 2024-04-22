@@ -14,6 +14,7 @@ import {
   IonCol,
   IonGrid,
   IonRow,
+  IonButton,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -35,6 +36,7 @@ import {
     IonGrid,
     IonCol,
     IonRow,
+    IonButton,
   ],
 })
 export class ProgramsComponent {
