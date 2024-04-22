@@ -53,6 +53,7 @@ export class LoginPage implements OnInit {
 
   login() {
     console.log('I AM IN LOGIN')
+    
   }
 
 }
