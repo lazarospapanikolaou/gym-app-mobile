@@ -19,15 +19,19 @@
     </ion-toolbar>
   </ion-header> -->
 
-  <ion-list>
-    <ion-item
-      *ngFor="let exercise of exercises"
-      (click)="goToExercise(exercise.id)"
-    >
-      <ion-label>{{ exercise.title }}</ion-label>
-      <div>
-        <ion-label>{{ exercise.estimatedTime }} m</ion-label>
-      </div>
-    </ion-item>
-  </ion-list>
+  <ion-card
+    *ngFor="let exercise of exercises"
+    (click)="goToExercise(exercise.id)"
+  >
+    <ion-card-content>
+      <ion-grid>
+        <ion-row class="ion-justify-content-between">
+          <ion-col class="start">{{ exercise.title }}</ion-col>
+          <ion-col class="end">
+            <div>{{ exercise.estimatedTime }} m</div>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

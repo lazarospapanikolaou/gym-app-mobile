@@ -9,6 +9,11 @@ import {
   IonToolbar,
   IonTitle,
   IonContent,
+  IonCard,
+  IonCardContent,
+  IonCol,
+  IonGrid,
+  IonRow,
 } from '@ionic/angular/standalone';
 
 @Component({
@@ -25,6 +30,11 @@ import {
     IonToolbar,
     IonTitle,
     IonContent,
+    IonCard,
+    IonCardContent,
+    IonGrid,
+    IonCol,
+    IonRow,
   ],
 })
 export class ProgramsComponent {
@@ -32,11 +42,11 @@ export class ProgramsComponent {
 
   constructor(private router: Router) {
     this.myPrograms.push(
-      { id: 1, gym: 'SuperFit', exercises: 12, estimatedTime: 90 },
-      { id: 2, gym: 'SuperMan', exercises: 12, estimatedTime: 100 },
-      { id: 3, gym: 'Excell', exercises: 12, estimatedTime: 120 },
-      { id: 4, gym: 'New Body', exercises: 12, estimatedTime: 90 },
-      { id: 5, gym: 'Fit Ness', exercises: 12, estimatedTime: 80 }
+      { id: 1, gym: 'Legs', exercises: 12, estimatedTime: 90 },
+      { id: 2, gym: 'Arms', exercises: 12, estimatedTime: 100 },
+      { id: 3, gym: 'Chest', exercises: 12, estimatedTime: 120 },
+      { id: 4, gym: 'Full Body', exercises: 12, estimatedTime: 90 },
+      { id: 5, gym: 'Abs', exercises: 12, estimatedTime: 80 }
     );
   }
 

@@ -8,6 +8,8 @@ import {
   IonCol,
   IonRow,
   IonGrid,
+  IonCardContent,
+  IonCard,
 } from '@ionic/angular/standalone';
 import { SliderConfirmComponent } from '../components/slider-confirm/slider-confirm.component';
 import { ActivatedRoute } from '@angular/router';
@@ -26,6 +28,8 @@ import { ActivatedRoute } from '@angular/router';
     IonCol,
     IonRow,
     IonGrid,
+    IonCardContent,
+    IonCard,
   ],
   standalone: true,
 })

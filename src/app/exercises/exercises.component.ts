@@ -14,7 +14,10 @@ import {
   IonCol,
   IonRow,
   IonGrid,
+  IonCard,
+  IonCardContent,
 } from '@ionic/angular/standalone';
+import { ExerciseComponent } from '../exercise/exercise.component';
 
 @Component({
   selector: 'app-exercises',
@@ -35,6 +38,9 @@ import {
     IonCol,
     IonRow,
     IonGrid,
+    IonCard,
+    IonCardContent,
+    ExerciseComponent,
   ],
 })
 export class ExercisesComponent {

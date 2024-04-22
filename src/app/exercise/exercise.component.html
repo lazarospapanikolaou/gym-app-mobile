@@ -19,11 +19,25 @@
     </ion-toolbar>
   </ion-header> -->
 
-  <div class="ion-padding">
-    <p>
-      This is an exercise to strength your upper muscles. Follow the instruction
-      below to complete it: 1. ..... 2. ..... 3. .....
-    </p>
-    <component-slider-confirm title="Exercise 1"></component-slider-confirm>
-  </div>
+  <ion-card>
+    <ion-card-content>
+      <ion-grid>
+        <ion-row class="ion-justify-content-between">
+          <ion-col
+            ><p>
+              This is an exercise to strength your upper muscles. Follow the
+              instruction below to complete it: 1. ..... 2. ..... 3. .....
+            </p></ion-col
+          >
+        </ion-row>
+        <ion-row>
+          <ion-col>
+            <component-slider-confirm
+              title="Exercise 1"
+            ></component-slider-confirm>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-card-content>
+  </ion-card>
 </ion-content>

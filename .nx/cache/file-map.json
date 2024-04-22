@@ -122,15 +122,15 @@
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "7380920990600614150"
+        "hash": "3797331477349339925"
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.html",
-        "hash": "327466588479813569"
+        "hash": "9507880278146493966"
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.scss",
-        "hash": "8844664624165461402"
+        "hash": "12780211408467065811"
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.ts",
@@ -138,19 +138,27 @@
       },
       {
         "file": "src/app/exercise/exercise.component.html",
-        "hash": "6697258651468664751"
+        "hash": "8748784450864880479"
       },
       {
         "file": "src/app/exercise/exercise.component.scss",
         "hash": "3244421341483603138"
       },
       {
-        "file": "src/app/exercise/exercise.component.spec.ts",
-        "hash": "18436290064666657346"
+        "file": "src/app/exercise/exercise.component.ts",
+        "hash": "815989592516875586"
       },
       {
-        "file": "src/app/exercise/exercise.component.ts",
-        "hash": "10277431208837802915"
+        "file": "src/app/exercises/exercises.component.html",
+        "hash": "17711783787112014258"
+      },
+      {
+        "file": "src/app/exercises/exercises.component.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/exercises/exercises.component.ts",
+        "hash": "18285706322948622498"
       },
       {
         "file": "src/app/explore-container/explore-container.component.html",
@@ -169,20 +177,16 @@
         "hash": "8529170809699812881"
       },
       {
-        "file": "src/app/tab1/tab1.page.html",
-        "hash": "6123583358159587698"
+        "file": "src/app/programs/programs.component.html",
+        "hash": "6814815231999273082"
       },
       {
-        "file": "src/app/tab1/tab1.page.scss",
+        "file": "src/app/programs/programs.component.scss",
         "hash": "3244421341483603138"
       },
       {
-        "file": "src/app/tab1/tab1.page.spec.ts",
-        "hash": "17990241773271754562"
-      },
-      {
-        "file": "src/app/tab1/tab1.page.ts",
-        "hash": "2186758161612333585"
+        "file": "src/app/programs/programs.component.ts",
+        "hash": "7479251107913428238"
       },
       {
         "file": "src/app/tab2/tab2.page.html",
@@ -218,7 +222,7 @@
       },
       {
         "file": "src/app/tabs/tabs.page.html",
-        "hash": "6240609773513705367"
+        "hash": "1583643562168608921"
       },
       {
         "file": "src/app/tabs/tabs.page.scss",
@@ -230,11 +234,11 @@
       },
       {
         "file": "src/app/tabs/tabs.page.ts",
-        "hash": "4746910058164250069"
+        "hash": "261998993696098527"
       },
       {
         "file": "src/app/tabs/tabs.routes.ts",
-        "hash": "7843669708194506350"
+        "hash": "3052343606927908732"
       },
       {
         "file": "src/assets/icon/favicon.png",
@@ -243,6 +247,14 @@
       {
         "file": "src/assets/shapes.svg",
         "hash": "6713572288142939778"
+      },
+      {
+        "file": "src/assets/thumbs-down-outline.svg",
+        "hash": "18041756512404693543"
+      },
+      {
+        "file": "src/assets/thumbs-up-outline.svg",
+        "hash": "3449662524108101540"
       },
       {
         "file": "src/environments/environment.prod.ts",
