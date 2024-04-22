@@ -41,7 +41,6 @@ export class ExerciseComponent implements OnInit {
   ngOnInit() {
     this.route.queryParams.subscribe((params: any) => {
       this.id = params.id;
-      console.log(this.id);
     });
   }
 }

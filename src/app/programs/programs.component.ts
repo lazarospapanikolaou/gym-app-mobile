@@ -53,7 +53,6 @@ export class ProgramsComponent {
   }
 
   goToExercise(id: number) {
-    console.log(id);
     this.router.navigate(['/tabs/programs/program'], {
       queryParams: { id: id },
     });

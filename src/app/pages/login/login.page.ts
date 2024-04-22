@@ -104,12 +104,12 @@ export class LoginPage implements OnInit {
       const hardcodedPassword = '1234';
     
       if (enteredEmail === hardcodedEmail && enteredPassword === hardcodedPassword) {
-        // Hardcoded authentication successful
+        // authentication successfull
         this.router.navigate(['/']);
         this.loginForm.reset();
         this.errors = undefined;
       } else {
-        // Hardcoded authentication failed
+        // authentication failed
         this.errors = 'Invalid email or password.';
       }
     }
