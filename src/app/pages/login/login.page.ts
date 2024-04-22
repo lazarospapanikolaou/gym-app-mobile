@@ -15,6 +15,7 @@ import { IonIcon, IonButton, IonCol, IonRow, IonGrid, IonNote, IonInput, IonItem
 })
 export class LoginPage implements OnInit {
 
+  errors: any;
   showPassword = false;
 
 
@@ -54,17 +55,22 @@ export class LoginPage implements OnInit {
   }
 
   login() {
-    const testEmail = 'test@test.com';
-    const testPassword = '1234';
-
-    const enteredEmail = this.email?.value;
-    const enteredPassword = this.password?.value;
-
-    if (enteredEmail === testEmail && enteredPassword === testPassword) {
-      console.log('Authentication successful')
-      this.router.navigate(['/tabs'])
-    } else {
-      console.log('Authentication failed. Please check your email and password.')
+    if (this.loginForm.valid) {
+      const enteredEmail = this.email?.value;
+      const enteredPassword = this.password?.value;
+    
+      const hardcodedEmail = 'test@test.com';
+      const hardcodedPassword = '1234';
+    
+      if (enteredEmail === hardcodedEmail && enteredPassword === hardcodedPassword) {
+        // Hardcoded authentication successful
+        this.router.navigate(['/']);
+        this.loginForm.reset();
+        this.errors = undefined;
+      } else {
+        // Hardcoded authentication failed
+        this.errors = 'Invalid email or password.';
+      }
     }
   }
 
