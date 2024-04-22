@@ -16,10 +16,66 @@
     </ion-card-header>
 
     <ion-card-content>
-      <div class="signin-btns">
+      <div class="inner-wrapper">
+        <form [formGroup]="loginForm" (ngSubmit)="login()">
+          <ion-list lines="none">
+            <ion-item class="ion-margin-bottom">
+              <ion-icon name="person-outline" slot="start"></ion-icon>
+              <ion-input
+                type="email"
+                placeholder="email address"
+                formControlName="email"
+              >
+              </ion-input>
+              <ion-note
+                slot="error"
+                *ngIf="email?.invalid && (email?.dirty || email?.touched)"
+              >
+                <p>email address required</p>
+              </ion-note>
+            </ion-item>
+            <ion-item>
+              <ion-icon name="lock-closed-outline" slot="start"></ion-icon>
+              <ion-input
+                [type]="getType()"
+                placeholder="password"
+                formControlName="password"
+              >
+              </ion-input>
+              <ion-icon
+                [name]="this.showPassword ? 'eye-outline': 'eye-off-outline'"
+                slot="end"
+                (click)="togglePasswordVisibility()"
+              ></ion-icon>
+              <ion-note
+                slot="error"
+                *ngIf="password?.invalid && (password?.dirty || password?.touched)"
+              >
+                <p>password required</p>
+              </ion-note>
+            </ion-item>
+          </ion-list>
+
+          <ion-grid>
+            <ion-row class="ion-justify-content-end">
+              <ion-col size="auto">
+                <ion-button
+                  type="submit"
+                  shape="round"
+                  [disabled]="!loginForm.valid"
+                >
+                  login 
+                  <ion-icon name="arrow-forward-outline" slot="end"></ion-icon>
+                </ion-button>
+              </ion-col>
+            </ion-row>
+          </ion-grid>
+        </form>
+      </div>
+      <!-- <div class="signin-btns">
         <ion-button fill="solid" shape="round" class="loginbtn">Login</ion-button>
         <ion-button fill="solid" shape="round" color="dark" class="registerbtn">Register</ion-button>
-      </div>
+      </div> -->
     </ion-card-content>
   </ion-card>
 </ion-content>
