@@ -30,6 +30,7 @@ import {
   IonCard,
   IonCardTitle,
 } from '@ionic/angular/standalone';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -60,7 +61,7 @@ import {
   ],
 })
 export class LoginPage implements OnInit {
-
+  user: any;
   errors: any;
   showPassword = false;
 
@@ -75,7 +76,7 @@ export class LoginPage implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(private userService: UserService, private fb: FormBuilder, private router: Router) {}
 
   get email(): AbstractControl | null {
     return this.loginForm.get('email');
@@ -99,19 +100,25 @@ export class LoginPage implements OnInit {
     if (this.loginForm.valid) {
       const enteredEmail = this.email?.value;
       const enteredPassword = this.password?.value;
+
+      const testEmail = 'test@test.com';
+      const testPassword = '1234';
     
-      const hardcodedEmail = 'test@test.com';
-      const hardcodedPassword = '1234';
-    
-      if (enteredEmail === hardcodedEmail && enteredPassword === hardcodedPassword) {
-        // authentication successfull
-        this.router.navigate(['/']);
-        this.loginForm.reset();
-        this.errors = undefined;
-      } else {
-        // authentication failed
-        this.errors = 'Invalid email or password.';
-      }
+      this.userService.attemptAuth({
+        email: enteredEmail,
+        password: enteredPassword
+      }).subscribe(
+        (user: any) => {
+          this.router.navigate(['/']);
+          this.loginForm.reset();
+          this.errors = undefined;
+        },
+        (error: any) => {
+          this.errors = 'Invalid email or password.';
+        }
+      );
+    }
+
     }
   }
-}
+
