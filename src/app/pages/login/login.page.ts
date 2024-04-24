@@ -98,27 +98,26 @@ export class LoginPage implements OnInit {
 
   login() {
     if (this.loginForm.valid) {
-      const enteredEmail = this.email?.value;
-      const enteredPassword = this.password?.value;
+      const credentials = this.loginForm.value;
 
-      const testEmail = 'test@test.com';
-      const testPassword = '1234';
-    
-      this.userService.attemptAuth({
-        email: enteredEmail,
-        password: enteredPassword
-      }).subscribe(
-        (user: any) => {
-          this.router.navigate(['/']);
-          this.loginForm.reset();
-          this.errors = undefined;
+      
+      this.userService.attempAuth(credentials).subscribe({
+        next: (currentUser: any) => {
+          if (currentUser) {
+            console.log(currentUser);
+            console.log(credentials);
+            this.loginForm.reset();
+            this.errors = undefined;
+            
+          } else {
+            console.log('Failed')
+          }
         },
-        (error: any) => {
-          this.errors = 'Invalid email or password.';
-        }
-      );
-    }
-
-    }
+        error: (errors: any) => {
+          this.errors = errors;
+        },
+      });    
   }
+}
+}
 
