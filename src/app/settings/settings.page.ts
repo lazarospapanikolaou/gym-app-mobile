@@ -1,6 +1,5 @@
-/* eslint-disable @angular-eslint/use-lifecycle-interface */
 import { Component } from '@angular/core';
-import { IonHeader, IonToolbar, IonTitle, IonContent, IonCol, IonGrid, IonRow, IonButton, IonIcon, IonList, IonListHeader, IonLabel, IonItem, IonSpinner } from '@ionic/angular/standalone';
+import { IonHeader, IonToolbar, IonTitle, IonContent, IonCol, IonGrid, IonRow, IonButton, IonIcon, IonList, IonListHeader, IonLabel, IonItem, IonSpinner, IonText } from '@ionic/angular/standalone';
 import { ExploreContainerComponent } from '../explore-container/explore-container.component';
 import { UserService } from '../services/user.service';
 import { Router } from '@angular/router';
@@ -13,7 +12,7 @@ import { CommonModule } from '@angular/common';
   templateUrl: 'settings.page.html',
   styleUrls: ['settings.page.scss'],
   standalone: true,
-  imports: [CommonModule, IonSpinner, IonItem, IonLabel, IonListHeader, IonList, IonIcon, IonButton, IonRow, IonGrid, IonCol, IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
+  imports: [IonText, CommonModule, IonSpinner, IonItem, IonLabel, IonListHeader, IonList, IonIcon, IonButton, IonRow, IonGrid, IonCol, IonHeader, IonToolbar, IonTitle, IonContent, ExploreContainerComponent],
 })
 export class SettingsPage {
   loading: boolean = true;

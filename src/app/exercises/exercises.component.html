@@ -13,26 +13,27 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <!-- <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Exercises</ion-title>
-    </ion-toolbar>
-  </ion-header> -->
-
-  <ion-card
-    *ngFor="let exercise of exercises"
-    (click)="goToExercise(exercise.id)"
-  >
-    <ion-card-content>
-      <ion-grid>
-        <ion-row class="ion-justify-content-between">
-          <ion-col class="start">{{ exercise.title }}</ion-col>
-          <ion-col class="end">
-            <div>{{ exercise.estimatedTime }} m</div>
-          </ion-col>
-        </ion-row>
-      </ion-grid>
-    </ion-card-content>
-  </ion-card>
+  <ng-container *ngIf="!loading; else loadingTemplate">
+    <ion-card *ngFor="let exercise of exercises" (click)="goToExercise(exercise.id)">
+      <ion-card-content>
+        <ion-grid>
+          <ion-row class="ion-justify-content-between">
+            <ion-col class="start">{{ exercise.title }}</ion-col>
+            <ion-col class="end">
+              <div>{{ exercise.estimatedTime }} m</div>
+            </ion-col>
+          </ion-row>
+        </ion-grid>
+      </ion-card-content>
+    </ion-card>
+  </ng-container>
 </ion-content>
+
+<ng-template #loadingTemplate>
+  <div class="spinner-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <span>Please wait...</span>
+  </div>
+</ng-template>
+
 <component-slider-confirm class="ion-padding"></component-slider-confirm>

@@ -1,33 +1,20 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Settings
+      <ion-label>
+        <ion-text>
+          <h4 class="text-heading-4">Settings</h4>
+        </ion-text>
+      </ion-label>
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-grid>
-        <ion-row>
-          <ion-col>
-            <ion-title size="large">Settings</ion-title>
-          </ion-col>
-          <!-- <ion-col>
-            <ion-button (click)="logout()" fill="clear">
-              <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>
-            </ion-button>
-          </ion-col> -->
-        </ion-row>
-      </ion-grid>
-    </ion-toolbar>
-  </ion-header>
-
+<ion-content [fullscreen]="true" class="ion-padding">
 <ng-container *ngIf="!loading; else loadingTemplate">
   <ion-list lines="none">
     <ion-list-header>
-      <ion-label>Settings</ion-label>
+      <ion-label size="medium">Settings</ion-label>
     </ion-list-header>
     <ion-button (click)="logout()" fill="clear">
       <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>

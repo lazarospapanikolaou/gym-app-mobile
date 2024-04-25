@@ -15,8 +15,7 @@ import {
   IonRow,
   IonGrid,
   IonCard,
-  IonCardContent,
-} from '@ionic/angular/standalone';
+  IonCardContent, IonSpinner } from '@ionic/angular/standalone';
 import { ExerciseComponent } from '../exercise/exercise.component';
 import { SliderConfirmComponent } from '../components/slider-confirm/slider-confirm.component';
 
@@ -25,7 +24,7 @@ import { SliderConfirmComponent } from '../components/slider-confirm/slider-conf
   templateUrl: './exercises.component.html',
   styleUrls: ['./exercises.component.scss'],
   standalone: true,
-  imports: [
+  imports: [IonSpinner, 
     IonList,
     IonItem,
     IonLabel,
@@ -48,19 +47,33 @@ import { SliderConfirmComponent } from '../components/slider-confirm/slider-conf
 export class ExercisesComponent {
   exercises: any = [];
   id!: number;
+  loading: boolean = true;
 
   constructor(private route: ActivatedRoute, private router: Router) {
-    this.exercises.push(
-      { id: 1, title: 'Biseps', estimatedTime: 20 },
-      { id: 2, title: 'Legs', estimatedTime: 30 },
-      { id: 3, title: 'Chest', estimatedTime: 40 }
-    );
   }
 
   ngOnInit() {
     this.route.queryParams.subscribe((params: any) => {
       this.id = params.id;
     });
+    this.getReload();
+  }
+
+  ionViewWillEnter() {
+    this.getReload();
+  }
+
+  getReload(){
+    this.loading = true;
+    setTimeout(() => {
+      this.exercises.push(
+        { id: 1, title: 'Biseps', estimatedTime: 20 },
+        { id: 2, title: 'Legs', estimatedTime: 30 },
+        { id: 3, title: 'Chest', estimatedTime: 40 }
+      );
+  
+      this.loading = false;
+    }, 500)
   }
 
   goToExercise(id: number) {
