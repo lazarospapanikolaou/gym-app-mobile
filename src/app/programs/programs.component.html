@@ -3,9 +3,7 @@
     <ion-title>
       <ion-label>
         <ion-text>
-          <h4 class="text-heading-4">
-            Programs
-          </h4>
+          <h4 class="text-heading-4">Programs</h4>
         </ion-text>
       </ion-label>
     </ion-title>
@@ -34,13 +32,18 @@
                 <div class="ion-text-start">{{ program.gym }}</div>
               </ion-col>
               <ion-col>
-                <div class="ion-text-end">{{ program.exercises }} exercises</div>
+                <div class="ion-text-end">
+                  {{ program.exercises }} exercises
+                </div>
               </ion-col>
             </ion-row>
           </ion-grid>
         </ion-card-subtitle>
       </ion-card-header>
-      <ion-card-content class="ion-margin-vertical ion-no-padding" positionV="bottom">
+      <ion-card-content
+        class="ion-margin-vertical ion-no-padding"
+        positionV="bottom"
+      >
         <ion-item lines="none">
           <ion-col>
             <ion-label class="ion-text-wrap">
@@ -50,7 +53,10 @@
           </ion-col>
           <ion-col class="ion-text-end">
             <ion-button (click)="goToExercise(program.id)" fill="clear">
-              <ion-icon name="chevron-forward-outline" slot="icon-only"></ion-icon>
+              <ion-icon
+                name="chevron-forward-outline"
+                slot="icon-only"
+              ></ion-icon>
             </ion-button>
           </ion-col>
         </ion-item>

@@ -13,3 +13,7 @@
   text-align: center;
   align-items: center;
 }
+
+ion-item::part(native) {
+  background-color: transparent;
+}
