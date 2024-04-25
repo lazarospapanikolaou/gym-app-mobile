@@ -24,6 +24,7 @@
     </ion-toolbar>
   </ion-header>
 
+<ng-container *ngIf="!loading; else loadingTemplate">
   <ion-list lines="none">
     <ion-list-header>
       <ion-label>Settings</ion-label>
@@ -33,4 +34,13 @@
       <ion-label>logout</ion-label>
     </ion-button>
   </ion-list>
+</ng-container>
+
 </ion-content>
+
+<ng-template #loadingTemplate>
+  <div class="spinner-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <span>Please wait...</span>
+  </div>
+</ng-template>
