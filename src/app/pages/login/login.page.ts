@@ -10,7 +10,7 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import {
   IonIcon,
   IonButton,
@@ -94,21 +94,17 @@ export class LoginPage implements OnInit {
     this.showPassword = !this.showPassword;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   login() {
     if (this.loginForm.valid) {
       const credentials = this.loginForm.value;
-
-      
       this.userService.attempAuth(credentials).subscribe({
         next: (currentUser: any) => {
           if (currentUser) {
-            console.log(currentUser);
-            console.log(credentials);
             this.loginForm.reset();
             this.errors = undefined;
-            
           } else {
             console.log('Failed')
           }

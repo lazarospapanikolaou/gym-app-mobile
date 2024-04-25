@@ -3,6 +3,7 @@
 import { Component } from '@angular/core';
 import { IonApp, IonRouterOutlet } from '@ionic/angular/standalone';
 import { UserService } from './services/user.service';
+import { NavigationEnd, Router } from '@angular/router';
 @Component({
   selector: 'app-root',
   templateUrl: 'app.component.html',
@@ -10,6 +11,9 @@ import { UserService } from './services/user.service';
   imports: [IonApp, IonRouterOutlet],
 })
 export class AppComponent {
-  constructor() {}
+  constructor(private router: Router, private userService: UserService) {}
 
+  ngOnInit() {
+
+  }
 }
