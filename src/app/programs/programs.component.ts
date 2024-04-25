@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { addIcons } from 'ionicons';
 import {
   IonList,
   IonItem,
@@ -16,6 +17,7 @@ import {
   IonRow,
   IonButton, IonIcon } from '@ionic/angular/standalone';
 import { UserService } from '../services/user.service';
+import { logOutOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-programs',
@@ -43,6 +45,7 @@ export class ProgramsComponent {
   myPrograms: any = [];
 
   constructor(private router: Router, private userService: UserService) {
+    addIcons({ logOutOutline });
     this.myPrograms.push(
       { id: 1, gym: 'Legs', exercises: 12, estimatedTime: 90 },
       { id: 2, gym: 'Arms', exercises: 12, estimatedTime: 100 },
