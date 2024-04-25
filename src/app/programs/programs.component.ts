@@ -15,16 +15,16 @@ import {
   IonCol,
   IonGrid,
   IonRow,
-  IonButton, IonIcon } from '@ionic/angular/standalone';
+  IonButton, IonIcon, IonText, IonCardHeader, IonCardSubtitle } from '@ionic/angular/standalone';
 import { UserService } from '../services/user.service';
-import { logOutOutline } from 'ionicons/icons';
+import { chevronForwardOutline, logOutOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-programs',
   templateUrl: './programs.component.html',
   styleUrls: ['./programs.component.scss'],
   standalone: true,
-  imports: [IonIcon, 
+  imports: [IonCardSubtitle, IonCardHeader, IonText, IonIcon, 
     IonList,
     IonItem,
     IonLabel,
@@ -45,7 +45,7 @@ export class ProgramsComponent {
   myPrograms: any = [];
 
   constructor(private router: Router, private userService: UserService) {
-    addIcons({ logOutOutline });
+    addIcons({ logOutOutline, chevronForwardOutline });
     this.myPrograms.push(
       { id: 1, gym: 'Legs', exercises: 12, estimatedTime: 90 },
       { id: 2, gym: 'Arms', exercises: 12, estimatedTime: 100 },
@@ -65,4 +65,6 @@ export class ProgramsComponent {
     await this.userService.purgeAuth();
     this.router.navigate(['/login'])
   }
+
+
 }
