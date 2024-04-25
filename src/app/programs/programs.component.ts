@@ -1,6 +1,7 @@
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
+import { addIcons } from 'ionicons';
 import {
   IonList,
   IonItem,
@@ -14,14 +15,16 @@ import {
   IonCol,
   IonGrid,
   IonRow,
-} from '@ionic/angular/standalone';
+  IonButton, IonIcon } from '@ionic/angular/standalone';
+import { UserService } from '../services/user.service';
+import { logOutOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-programs',
   templateUrl: './programs.component.html',
   styleUrls: ['./programs.component.scss'],
   standalone: true,
-  imports: [
+  imports: [IonIcon, 
     IonList,
     IonItem,
     IonLabel,
@@ -35,12 +38,14 @@ import {
     IonGrid,
     IonCol,
     IonRow,
+    IonButton,
   ],
 })
 export class ProgramsComponent {
   myPrograms: any = [];
 
-  constructor(private router: Router) {
+  constructor(private router: Router, private userService: UserService) {
+    addIcons({ logOutOutline });
     this.myPrograms.push(
       { id: 1, gym: 'Legs', exercises: 12, estimatedTime: 90 },
       { id: 2, gym: 'Arms', exercises: 12, estimatedTime: 100 },
@@ -51,9 +56,13 @@ export class ProgramsComponent {
   }
 
   goToExercise(id: number) {
-    console.log(id);
     this.router.navigate(['/tabs/programs/program'], {
       queryParams: { id: id },
     });
+  }
+
+  async logout(): Promise<void> {
+    await this.userService.purgeAuth();
+    this.router.navigate(['/login'])
   }
 }
