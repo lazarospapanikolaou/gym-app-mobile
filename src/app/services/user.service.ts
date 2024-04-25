@@ -19,6 +19,12 @@ import { Router } from '@angular/router';
       return !! localStorage.getItem('accessToken')
     }
 
+    async purgeAuth(): Promise<void> {
+      localStorage.removeItem('accessToken');
+      // await this.storageService.deleteValue('accessToken');
+      console.log('delete the token')
+    }
+
     attempAuth(credentials: any): Observable<boolean> {
       if (credentials.email == 'test@test.com' && credentials.password == '1234') {
         const accessToken = 'mockAccessToken';
