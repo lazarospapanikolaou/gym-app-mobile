@@ -130,7 +130,7 @@
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.ts",
-        "hash": "5338877228563725623"
+        "hash": "9376386845344054569"
       },
       {
         "file": "src/app/exercise/exercise.component.html",
@@ -146,7 +146,7 @@
       },
       {
         "file": "src/app/exercises/exercises.component.html",
-        "hash": "9140663329490481331"
+        "hash": "13425854388939318654"
       },
       {
         "file": "src/app/exercises/exercises.component.scss",
@@ -154,7 +154,7 @@
       },
       {
         "file": "src/app/exercises/exercises.component.ts",
-        "hash": "16904511776127538574"
+        "hash": "8861222122161892876"
       },
       {
         "file": "src/app/explore-container/explore-container.component.html",
@@ -182,7 +182,7 @@
       },
       {
         "file": "src/app/pages/login/login.page.ts",
-        "hash": "13549096201525394582"
+        "hash": "12282882790293148905"
       },
       {
         "file": "src/app/pages/register/register.page.html",
@@ -202,15 +202,15 @@
       },
       {
         "file": "src/app/programs/programs.component.html",
-        "hash": "1340714993168165815"
+        "hash": "1739769170662596429"
       },
       {
         "file": "src/app/programs/programs.component.scss",
-        "hash": "16514410407185668227"
+        "hash": "6601179034759563306"
       },
       {
         "file": "src/app/programs/programs.component.ts",
-        "hash": "11032942683432750643"
+        "hash": "7624731148786971623"
       },
       {
         "file": "src/app/shared/shared.module.ts",
