@@ -10,7 +10,7 @@ import {
   FormsModule,
   ReactiveFormsModule,
 } from '@angular/forms';
-import { Router } from '@angular/router';
+import { NavigationEnd, Router } from '@angular/router';
 import {
   IonIcon,
   IonButton,
@@ -30,6 +30,7 @@ import {
   IonCard,
   IonCardTitle,
 } from '@ionic/angular/standalone';
+import { UserService } from 'src/app/services/user.service';
 
 @Component({
   selector: 'app-login',
@@ -60,6 +61,8 @@ import {
   ],
 })
 export class LoginPage implements OnInit {
+  user: any;
+  errors: any;
   showPassword = false;
 
   loginForm: FormGroup = this.fb.group({
@@ -73,7 +76,7 @@ export class LoginPage implements OnInit {
     password: ['', Validators.required],
   });
 
-  constructor(private fb: FormBuilder, private router: Router) {}
+  constructor(private userService: UserService, private fb: FormBuilder, private router: Router) {}
 
   get email(): AbstractControl | null {
     return this.loginForm.get('email');
@@ -91,22 +94,26 @@ export class LoginPage implements OnInit {
     this.showPassword = !this.showPassword;
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+  }
 
   login() {
-    const testEmail = 'test@test.com';
-    const testPassword = '1234';
-
-    const enteredEmail = this.email?.value;
-    const enteredPassword = this.password?.value;
-
-    if (enteredEmail === testEmail && enteredPassword === testPassword) {
-      console.log('Authentication successful');
-      this.router.navigate(['/']);
-    } else {
-      console.log(
-        'Authentication failed. Please check your email and password.'
-      );
-    }
+    if (this.loginForm.valid) {
+      const credentials = this.loginForm.value;
+      this.userService.attempAuth(credentials).subscribe({
+        next: (currentUser: any) => {
+          if (currentUser) {
+            this.loginForm.reset();
+            this.errors = undefined;
+          } else {
+            console.log('Failed')
+          }
+        },
+        error: (errors: any) => {
+          this.errors = errors;
+        },
+      });    
   }
 }
+}
+
