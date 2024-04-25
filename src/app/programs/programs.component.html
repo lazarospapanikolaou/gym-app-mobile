@@ -22,7 +22,7 @@
 
     </ion-toolbar>
   </ion-header> -->
-  <ng-container>
+  <ng-container *ngIf="!loading; else loadingTemplate">
     <ion-card class="ion-margin-bottom" *ngFor="let program of myPrograms">
       <ion-card-header color="primary">
         <ion-card-subtitle>
@@ -64,3 +64,10 @@
     </ion-card>
   </ng-container>
 </ion-content>
+
+<ng-template #loadingTemplate>
+  <div class="spinner-container">
+    <ion-spinner name="crescent"></ion-spinner>
+    <span>Please wait...</span>
+  </div>
+</ng-template>
