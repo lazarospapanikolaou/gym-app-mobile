@@ -23,10 +23,10 @@
         </ion-card-subtitle>
       </ion-card-header> -->
 
-    <ion-card-content class="ion-no-padding" positionV="bottom">
+      <ion-card-content class="ion-no-padding" positionV="bottom">
         <ion-grid class="grid-content">
           <ion-row>
-            <ion-col size="7">
+            <ion-col size="4">
               <video controls poster="path/to/video-screenshot.jpg">
                 <source
                   src="http://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4"
@@ -39,36 +39,63 @@
                 fill="contain"
               ></ion-img> -->
             </ion-col>
-            <ion-col class="middle-col" size="5">
-                <div class="ion-text-start"  style="font-weight: bold; font-size: 11px; padding-bottom: 25px;">{{ program.gym }}</div>
-                  <ion-row>
-                    <ion-col>
-                      <div class="chat-message">
-                        <ion-icon size="small" name="time-outline" slot="icon-only"></ion-icon>
-                        <p>{{ program.estimatedTime }}m</p>
-                      </div>
-                    </ion-col>
-                    <ion-col>
-                      <div class="chat-message">
-                        <ion-icon size="small" name="heart-outline" slot="icon-only"></ion-icon>
-                      </div>
-                    </ion-col>
-                    <ion-col>
-                      <div class="chat-message">
-                        <ion-icon size="small" name="chatbubble-outline" slot="icon-only"></ion-icon>
-                      </div>
-                    </ion-col>
-                  </ion-row>
+            <ion-col class="middle-col" size="7">
+              <ion-row>
+                <div
+                  class="ion-text-start"
+                  style="
+                    font-weight: bold;
+                    font-size: 11px;
+                    padding-bottom: 25px;
+                  "
+                >
+                  {{ program.gym }}
+                </div>
+              </ion-row>
+              <ion-row>
+                <ion-col>
+                  <div class="chat-message">
+                    <ion-icon
+                      size="small"
+                      name="time-outline"
+                      slot="icon-only"
+                    ></ion-icon>
+                    <p>{{ program.estimatedTime }}m</p>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div class="chat-message">
+                    <ion-icon
+                      size="small"
+                      name="heart-outline"
+                      slot="icon-only"
+                    ></ion-icon>
+                    <p>55</p>
+                  </div>
+                </ion-col>
+                <ion-col>
+                  <div class="chat-message">
+                    <ion-icon
+                      size="small"
+                      name="chatbubble-outline"
+                      slot="icon-only"
+                    ></ion-icon>
+                    <p>36</p>
+                  </div>
+                </ion-col>
+              </ion-row>
             </ion-col>
-            <ion-col class="ion-text-end">
-              <ion-button (click)="goToExercise(program.id)" fill="clear">
-                <ion-icon size="small" name="chevron-forward-outline" slot="icon-only"></ion-icon>
-              </ion-button>
+            <ion-col size="1">
+              <div class="more" (click)="goToExercise(program.id)">
+                <ion-icon
+                  class="more-icon"
+                  name="ellipsis-vertical-outline"
+                ></ion-icon>
+              </div>
             </ion-col>
           </ion-row>
         </ion-grid>
-    </ion-card-content>
-
+      </ion-card-content>
     </ion-card>
   </ng-container>
 </ion-content>

@@ -25,13 +25,12 @@ ion-item::part(native) {
 
 .grid-content {
   padding-bottom: 0px;
-  padding-right: 0px; 
+  padding-right: 0px;
   padding-left: 0px;
 }
 
 .middle-col {
-  padding-right: 0px;
-  padding-bottom: 0px;
+  padding: 3%;
 }
 .chats {
   padding: 0;
@@ -90,6 +89,14 @@ ion-item::part(native) {
   }
 }
 
+ion-grid {
+  padding: 0;
+}
+
+ion-col {
+  padding: 0;
+}
+
 .chat-message {
   display: flex;
   // align-items: center;
@@ -105,4 +112,14 @@ ion-item::part(native) {
 
 video {
   width: 100%;
+  height: 100%;
+}
+
+.more-icon {
+  height: 100%;
+}
+
+.more {
+  display: flex;
+  height: 100%;
 }
