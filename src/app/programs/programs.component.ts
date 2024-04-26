@@ -1,3 +1,5 @@
+/* eslint-disable @angular-eslint/use-lifecycle-interface */
+/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -17,7 +19,7 @@ import {
   IonRow,
   IonButton, IonIcon, IonText, IonCardHeader, IonCardSubtitle, IonSpinner, IonImg, IonAvatar } from '@ionic/angular/standalone';
 import { UserService } from '../services/user.service';
-import { chevronForwardOutline, ellipsisVerticalOutline, lockOpenOutline, logOutOutline } from 'ionicons/icons';
+import { chatbubbleOutline, chevronForwardOutline, ellipsisVerticalOutline, heartOutline, lockOpenOutline, logOutOutline, timeOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-programs',
@@ -46,7 +48,7 @@ export class ProgramsComponent {
   loading: boolean = true;
 
   constructor(private router: Router, private userService: UserService) {
-    addIcons({ logOutOutline, chevronForwardOutline, ellipsisVerticalOutline, lockOpenOutline });    
+    addIcons({ logOutOutline, chevronForwardOutline, ellipsisVerticalOutline, lockOpenOutline, timeOutline, heartOutline, chatbubbleOutline });    
   }
 
   ngOnInit() {

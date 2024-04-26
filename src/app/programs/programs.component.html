@@ -33,10 +33,29 @@
             </ion-col>
               
             <ion-col size="5">
-              <ion-label class="ion-text-wrap">
-                <h2>Workout Time</h2>
-                <p>{{ program.estimatedTime }}m</p>
-              </ion-label>
+                <h2>Daily Pump</h2>
+                
+                  <ion-row>
+                    <ion-col>
+                      <div class="chat-message">
+                        <ion-icon size="small" name="time-outline" slot="icon-only"></ion-icon>
+                        <p>{{ program.estimatedTime }}m</p>
+                      </div>
+                    </ion-col>
+                    <ion-col>
+                      <div class="chat-message">
+                        <ion-icon size="small" name="heart-outline" slot="icon-only"></ion-icon>
+                      </div>
+                    </ion-col>
+                    <ion-col>
+                      <div class="chat-message">
+                        <ion-icon size="small" name="chatbubble-outline" slot="icon-only"></ion-icon>
+                      </div>
+                    </ion-col>
+                  </ion-row>
+              
+
+
             </ion-col>
             
             <ion-col class="ion-text-end">

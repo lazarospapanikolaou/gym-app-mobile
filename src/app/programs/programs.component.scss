@@ -18,7 +18,10 @@ ion-item::part(native) {
   background-color: transparent;
 }
 
-
+.ion-margin-end {
+  --margin-end: var(--ion-margin, 20px);
+  margin-inline-end: var(--ion-margin, 20px);
+}
 .chats {
   padding: 0;
 
@@ -74,11 +77,20 @@ ion-item::part(native) {
       }
     }
 
-    .chat-message p {
-      font-size: 0.75rem;
-      line-height: 1rem;
-      color: var(--ion-color-medium);
-      margin-bottom: 0px;
-    }
+
+  }
+
+}
+
+.chat-message {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 2px;
+  font-size: 0.75rem;
+  color: var(--ion-color-medium);
+  
+  p {
+    margin-bottom: 0%;
   }
 }
