@@ -99,11 +99,11 @@
       },
       {
         "file": "package-lock.json",
-        "hash": "13290339175740482363"
+        "hash": "16584849421925328347"
       },
       {
         "file": "package.json",
-        "hash": "8709157994020375303"
+        "hash": "9059390973076773415"
       },
       {
         "file": "src/app/app.component.html",
@@ -115,11 +115,11 @@
       },
       {
         "file": "src/app/app.component.ts",
-        "hash": "9286534991027421385"
+        "hash": "8567460825992120133"
       },
       {
         "file": "src/app/app.routes.ts",
-        "hash": "11805653815000398478"
+        "hash": "10097450479079785227"
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.html",
@@ -143,11 +143,11 @@
       },
       {
         "file": "src/app/exercise/exercise.component.ts",
-        "hash": "15937375143309695300"
+        "hash": "5434356628093197356"
       },
       {
         "file": "src/app/exercises/exercises.component.html",
-        "hash": "13425854388939318654"
+        "hash": "6464189729792788047"
       },
       {
         "file": "src/app/exercises/exercises.component.scss",
@@ -155,7 +155,7 @@
       },
       {
         "file": "src/app/exercises/exercises.component.ts",
-        "hash": "8861222122161892876"
+        "hash": "14364569928638642369"
       },
       {
         "file": "src/app/explore-container/explore-container.component.html",
@@ -174,16 +174,20 @@
         "hash": "8529170809699812881"
       },
       {
+        "file": "src/app/models/user.model.ts",
+        "hash": "9292208489487515464"
+      },
+      {
         "file": "src/app/pages/login/login.page.html",
-        "hash": "7523216317554478793"
+        "hash": "4498568110484025099"
       },
       {
         "file": "src/app/pages/login/login.page.scss",
-        "hash": "9033356271377953058"
+        "hash": "14551189408015183137"
       },
       {
         "file": "src/app/pages/login/login.page.ts",
-        "hash": "12282882790293148905"
+        "hash": "15597463087744006591"
       },
       {
         "file": "src/app/pages/register/register.page.html",
@@ -203,23 +207,43 @@
       },
       {
         "file": "src/app/programs/programs.component.html",
-        "hash": "1739769170662596429"
+        "hash": "17227056640261476940"
       },
       {
         "file": "src/app/programs/programs.component.scss",
-        "hash": "6601179034759563306"
+        "hash": "2293963167569493255"
       },
       {
         "file": "src/app/programs/programs.component.ts",
-        "hash": "7624731148786971623"
+        "hash": "14871180731340832462"
       },
       {
-        "file": "src/app/shared/shared.module.ts",
-        "hash": "9699282314917819236"
+        "file": "src/app/services/guards/auth.guard.ts",
+        "hash": "1493245625676295191"
+      },
+      {
+        "file": "src/app/services/user.service.ts",
+        "hash": "16257737955874585319"
+      },
+      {
+        "file": "src/app/settings/settings.page.html",
+        "hash": "9226202684814186634"
+      },
+      {
+        "file": "src/app/settings/settings.page.scss",
+        "hash": "3244421341483603138"
+      },
+      {
+        "file": "src/app/settings/settings.page.spec.ts",
+        "hash": "2773112090657698228"
+      },
+      {
+        "file": "src/app/settings/settings.page.ts",
+        "hash": "10895500465786054836"
       },
       {
         "file": "src/app/tab2/tab2.page.html",
-        "hash": "3243310937599258314"
+        "hash": "5492734007611459904"
       },
       {
         "file": "src/app/tab2/tab2.page.scss",
@@ -234,24 +258,8 @@
         "hash": "9029420851019886179"
       },
       {
-        "file": "src/app/tab3/tab3.page.html",
-        "hash": "14919749400075004122"
-      },
-      {
-        "file": "src/app/tab3/tab3.page.scss",
-        "hash": "3244421341483603138"
-      },
-      {
-        "file": "src/app/tab3/tab3.page.spec.ts",
-        "hash": "13089571937070500301"
-      },
-      {
-        "file": "src/app/tab3/tab3.page.ts",
-        "hash": "12137707986512009580"
-      },
-      {
         "file": "src/app/tabs/tabs.page.html",
-        "hash": "1583643562168608921"
+        "hash": "17773698945943753136"
       },
       {
         "file": "src/app/tabs/tabs.page.scss",
@@ -263,11 +271,11 @@
       },
       {
         "file": "src/app/tabs/tabs.page.ts",
-        "hash": "261998993696098527"
+        "hash": "6982548321467084397"
       },
       {
         "file": "src/app/tabs/tabs.routes.ts",
-        "hash": "7142375119040245761"
+        "hash": "8649206870650359675"
       },
       {
         "file": "src/assets/icon/favicon.png",
@@ -295,7 +303,7 @@
       },
       {
         "file": "src/global.scss",
-        "hash": "1918626602965251672"
+        "hash": "6188014829633543005"
       },
       {
         "file": "src/index.html",
