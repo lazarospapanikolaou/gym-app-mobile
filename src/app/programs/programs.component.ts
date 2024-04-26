@@ -25,6 +25,7 @@ import {
   IonSpinner,
   IonImg,
   IonAvatar,
+  IonBadge,
 } from '@ionic/angular/standalone';
 import { UserService } from '../services/user.service';
 import {
@@ -64,6 +65,7 @@ import {
     IonCol,
     IonRow,
     IonButton,
+    IonBadge,
   ],
 })
 export class ProgramsComponent {

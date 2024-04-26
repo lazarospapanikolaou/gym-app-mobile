@@ -123,3 +123,19 @@ video {
   display: flex;
   height: 100%;
 }
+
+.card {
+  position: relative;
+}
+
+.card-content {
+  z-index: 1;
+}
+
+.badge {
+  position: relative;
+  float: right;
+  margin-top: -10px;
+  margin-right: -10px;
+  z-index: 1000;
+}
