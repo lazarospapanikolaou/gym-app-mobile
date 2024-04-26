@@ -76,21 +76,22 @@ ion-item::part(native) {
         margin-right: 0.5rem;
       }
     }
-
-
   }
-
 }
 
 .chat-message {
   display: flex;
-  align-items: center;
-  justify-content: center;
+  // align-items: center;
+  // justify-content: center;
   gap: 2px;
   font-size: 0.75rem;
   color: var(--ion-color-medium);
-  
+
   p {
     margin-bottom: 0%;
   }
+}
+
+video {
+  width: 100%;
 }

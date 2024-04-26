@@ -17,16 +17,39 @@ import {
   IonCol,
   IonGrid,
   IonRow,
-  IonButton, IonIcon, IonText, IonCardHeader, IonCardSubtitle, IonSpinner, IonImg, IonAvatar } from '@ionic/angular/standalone';
+  IonButton,
+  IonIcon,
+  IonText,
+  IonCardHeader,
+  IonCardSubtitle,
+  IonSpinner,
+  IonImg,
+  IonAvatar,
+} from '@ionic/angular/standalone';
 import { UserService } from '../services/user.service';
-import { chatbubbleOutline, chevronForwardOutline, ellipsisVerticalOutline, heartOutline, lockOpenOutline, logOutOutline, timeOutline } from 'ionicons/icons';
+import {
+  chatbubbleOutline,
+  chevronForwardOutline,
+  ellipsisVerticalOutline,
+  heartOutline,
+  lockOpenOutline,
+  logOutOutline,
+  timeOutline,
+} from 'ionicons/icons';
 
 @Component({
   selector: 'app-programs',
   templateUrl: './programs.component.html',
   styleUrls: ['./programs.component.scss'],
   standalone: true,
-  imports: [IonAvatar, IonImg, IonSpinner, IonCardSubtitle, IonCardHeader, IonText, IonIcon, 
+  imports: [
+    IonAvatar,
+    IonImg,
+    IonSpinner,
+    IonCardSubtitle,
+    IonCardHeader,
+    IonText,
+    IonIcon,
     IonList,
     IonItem,
     IonLabel,
@@ -48,22 +71,33 @@ export class ProgramsComponent {
   loading: boolean = true;
 
   constructor(private router: Router, private userService: UserService) {
-    addIcons({ logOutOutline, chevronForwardOutline, ellipsisVerticalOutline, lockOpenOutline, timeOutline, heartOutline, chatbubbleOutline });    
+    addIcons({
+      logOutOutline,
+      chevronForwardOutline,
+      ellipsisVerticalOutline,
+      lockOpenOutline,
+      timeOutline,
+      heartOutline,
+      chatbubbleOutline,
+    });
   }
 
-  ngOnInit() {
-  
-  }
+  ngOnInit() {}
 
   ionViewWillEnter() {
     this.getReload();
   }
 
-  getReload(){
+  getReload() {
     this.loading = true;
     setTimeout(() => {
       this.myPrograms.push(
-        { id: 1, gym: 'Quads/Abductors/Adductor', exercises: 12, estimatedTime: 90 },
+        {
+          id: 1,
+          gym: 'Quads/Abductors/Adductor',
+          exercises: 12,
+          estimatedTime: 90,
+        },
         { id: 2, gym: 'Back/Rear Delt', exercises: 12, estimatedTime: 100 },
         { id: 3, gym: 'Chest', exercises: 12, estimatedTime: 120 },
         { id: 4, gym: 'Calves/Abs/Neck', exercises: 12, estimatedTime: 90 },
@@ -71,7 +105,7 @@ export class ProgramsComponent {
       );
 
       this.loading = false;
-    }, 500)
+    }, 500);
   }
 
   goToExercise(id: number) {
@@ -82,8 +116,6 @@ export class ProgramsComponent {
 
   async logout(): Promise<void> {
     await this.userService.purgeAuth();
-    this.router.navigate(['/login'])
+    this.router.navigate(['/login']);
   }
-
-
 }
