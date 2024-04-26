@@ -50,7 +50,7 @@ export class ProgramsComponent {
   }
 
   ngOnInit() {
-    this.getReload();
+  
   }
 
   ionViewWillEnter() {
