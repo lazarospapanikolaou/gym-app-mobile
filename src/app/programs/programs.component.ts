@@ -61,6 +61,7 @@ export class ProgramsComponent {
 
   getReload(){
     this.loading = true;
+    this.myPrograms = [];
     setTimeout(() => {
       this.myPrograms.push(
         { id: 1, gym: 'Quads/Abductors/Adductor', exercises: 12, estimatedTime: 90 },

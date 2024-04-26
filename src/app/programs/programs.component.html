@@ -13,28 +13,26 @@
 <ion-content [fullscreen]="true" class="ion-padding">
   <ng-container *ngIf="!loading; else loadingTemplate">
     <ion-card class="ion-margin-bottom" *ngFor="let program of myPrograms">
-      <ion-card-header color="primary">
+      <!-- <ion-card-header color="primary">
         <ion-card-subtitle>
           <ion-grid>
             <ion-row>
               <ion-col>
-                <div class="ion-text-start">{{ program.gym }}</div>
+                
               </ion-col>
             </ion-row>
           </ion-grid>
         </ion-card-subtitle>
-      </ion-card-header>
+      </ion-card-header> -->
 
     <ion-card-content class="ion-no-padding" positionV="bottom">
-        <ion-grid>
+        <ion-grid class="grid-content">
           <ion-row>
             <ion-col>
               <ion-img src="https://docs-demo.ionic.io/assets/madison.jpg" fill="contain"></ion-img>
             </ion-col>
-              
-            <ion-col size="5">
-                <h2>Daily Pump</h2>
-                
+            <ion-col class="middle-col" size="5">
+                <div class="ion-text-start"  style="font-weight: bold; font-size: 11px; padding-bottom: 25px;">{{ program.gym }}</div>
                   <ion-row>
                     <ion-col>
                       <div class="chat-message">
@@ -53,20 +51,14 @@
                       </div>
                     </ion-col>
                   </ion-row>
-              
-
-
             </ion-col>
-            
             <ion-col class="ion-text-end">
               <ion-button (click)="goToExercise(program.id)" fill="clear">
                 <ion-icon size="small" name="chevron-forward-outline" slot="icon-only"></ion-icon>
               </ion-button>
             </ion-col>
-            
           </ion-row>
         </ion-grid>
-     
     </ion-card-content>
 
     </ion-card>
