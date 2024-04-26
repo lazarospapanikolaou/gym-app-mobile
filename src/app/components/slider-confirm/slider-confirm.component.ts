@@ -176,11 +176,11 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
     if (xPos > this.dragWidth / 2) {
       this.after.nativeElement.style.opacity = 1;
       this.before.nativeElement.style.opacity = 0;
-      this.container.nativeElement.style.backgroundColor = 'rgb(25, 233, 118)';
+      this.container.nativeElement.style.backgroundColor = 'rgb(23, 37, 98)';
     } else {
       this.after.nativeElement.style.opacity = 0;
       this.before.nativeElement.style.opacity = 1;
-      this.container.nativeElement.style.backgroundColor = 'rgb(66, 79, 227)';
+      this.container.nativeElement.style.backgroundColor = 'rgb(23, 37, 98)';
     }
   };
 
