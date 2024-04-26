@@ -1,5 +1,3 @@
-/* eslint-disable @angular-eslint/use-lifecycle-interface */
-/* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 import { CommonModule } from '@angular/common';
 import { Component } from '@angular/core';
 import { Router } from '@angular/router';
@@ -17,16 +15,16 @@ import {
   IonCol,
   IonGrid,
   IonRow,
-  IonButton, IonIcon, IonText, IonCardHeader, IonCardSubtitle, IonSpinner } from '@ionic/angular/standalone';
+  IonButton, IonIcon, IonText, IonCardHeader, IonCardSubtitle, IonSpinner, IonImg, IonAvatar } from '@ionic/angular/standalone';
 import { UserService } from '../services/user.service';
-import { chevronForwardOutline, logOutOutline } from 'ionicons/icons';
+import { chevronForwardOutline, ellipsisVerticalOutline, lockOpenOutline, logOutOutline } from 'ionicons/icons';
 
 @Component({
   selector: 'app-programs',
   templateUrl: './programs.component.html',
   styleUrls: ['./programs.component.scss'],
   standalone: true,
-  imports: [IonSpinner, IonCardSubtitle, IonCardHeader, IonText, IonIcon, 
+  imports: [IonAvatar, IonImg, IonSpinner, IonCardSubtitle, IonCardHeader, IonText, IonIcon, 
     IonList,
     IonItem,
     IonLabel,
@@ -48,7 +46,7 @@ export class ProgramsComponent {
   loading: boolean = true;
 
   constructor(private router: Router, private userService: UserService) {
-    addIcons({ logOutOutline, chevronForwardOutline });    
+    addIcons({ logOutOutline, chevronForwardOutline, ellipsisVerticalOutline, lockOpenOutline });    
   }
 
   ngOnInit() {
@@ -63,11 +61,11 @@ export class ProgramsComponent {
     this.loading = true;
     setTimeout(() => {
       this.myPrograms.push(
-        { id: 1, gym: 'Legs', exercises: 12, estimatedTime: 90 },
-        { id: 2, gym: 'Arms', exercises: 12, estimatedTime: 100 },
+        { id: 1, gym: 'Quads/Abductors/Adductor', exercises: 12, estimatedTime: 90 },
+        { id: 2, gym: 'Back/Rear Delt', exercises: 12, estimatedTime: 100 },
         { id: 3, gym: 'Chest', exercises: 12, estimatedTime: 120 },
-        { id: 4, gym: 'Full Body', exercises: 12, estimatedTime: 90 },
-        { id: 5, gym: 'Abs', exercises: 12, estimatedTime: 80 }
+        { id: 4, gym: 'Calves/Abs/Neck', exercises: 12, estimatedTime: 90 },
+        { id: 5, gym: 'Hamstrings/Glutes', exercises: 12, estimatedTime: 80 }
       );
 
       this.loading = false;
