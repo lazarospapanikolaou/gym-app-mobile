@@ -129,7 +129,8 @@ video {
 }
 
 .card-content {
-  z-index: 1;
+  position: relative;
+  
 }
 
 .badge {
@@ -137,5 +138,8 @@ video {
   float: right;
   margin-top: -10px;
   margin-right: -10px;
-  z-index: 1000;
+  overflow: visible;
 }
+
+
+
