@@ -56,7 +56,7 @@ export class ExercisesComponent {
     this.route.queryParams.subscribe((params: any) => {
       this.id = params.id;
     });
-    this.getReload();
+    // this.getReload();
   }
 
   ionViewWillEnter() {
