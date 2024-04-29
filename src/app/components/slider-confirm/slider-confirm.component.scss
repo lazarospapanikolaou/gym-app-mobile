@@ -10,7 +10,7 @@
   align-items: center;
   position: relative;
   overflow: hidden;
-  border-radius: 30px;
+  border-radius: 50px;
   touch-action: none;
   background-color: rgb(23, 37, 98);
 }
@@ -90,7 +90,7 @@ ion-alert.custom-alert {
 
   ::ng-deep .alert-button-group {
     button.alert-button.thumbs-up {
-      background-image: url("../../../assets/thumbs-up-outline.svg");
+      background-image: url("../../../assets/icons8-thumbs-up-64.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;
@@ -98,7 +98,7 @@ ion-alert.custom-alert {
     }
 
     button.alert-button.thumbs-down {
-      background-image: url("../../../assets/thumbs-down-outline.svg");
+      background-image: url("../../../assets/icons8-thumbs-down-64.png");
       background-position: center;
       background-repeat: no-repeat;
       background-size: contain;

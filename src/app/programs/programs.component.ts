@@ -30,6 +30,7 @@ import {
 import { UserService } from '../services/user.service';
 import {
   chatbubbleOutline,
+  checkmarkCircleOutline,
   chevronForwardOutline,
   ellipsisVerticalOutline,
   heartOutline,
@@ -81,6 +82,7 @@ export class ProgramsComponent {
       timeOutline,
       heartOutline,
       chatbubbleOutline,
+      checkmarkCircleOutline,
     });
   }
 
