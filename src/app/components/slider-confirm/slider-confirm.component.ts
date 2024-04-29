@@ -1,5 +1,6 @@
 /* eslint-disable @angular-eslint/no-empty-lifecycle-method */
 /* eslint-disable @angular-eslint/component-selector */
+import { CommonModule } from '@angular/common';
 import {
   AfterViewInit,
   Component,
@@ -18,7 +19,7 @@ export
   templateUrl: './slider-confirm.component.html',
   styleUrls: ['./slider-confirm.component.scss'],
   standalone: true,
-  imports: [IonAlert, IonIcon],
+  imports: [CommonModule, IonAlert, IonIcon],
 })
 class SliderConfirmComponent implements OnInit, AfterViewInit {
   @Input() title!: string;
@@ -29,7 +30,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   @ViewChild('end') end!: ElementRef;
   dragWidth!: number;
   active: boolean;
-  currentX!: number;
+  currentX: number = 0;
   initialX!: number;
   xOffset: number;
   openAlert: boolean = false;
@@ -114,7 +115,9 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
     );
   }
 
-  ngOnInit() {}
+  ngOnInit() {
+    console.log(this.openAlert);
+  }
 
   submitLater(event: any) {}
 
@@ -157,6 +160,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
 
       if (e.type === 'touchmove') {
         this.currentX = e.touches[0].clientX - this.initialX;
+        console.log(this.currentX);
       } else {
         this.currentX = e.clientX - this.initialX;
       }
@@ -201,13 +205,15 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   };
 
   completed = () => {
+    this.openAlert = true;
     this.end.nativeElement.style.opacity = 1;
     this.after.nativeElement.style.opacity = 0;
     this.before.nativeElement.style.opacity = 0;
-    this.openAlert = true;
   };
 
   setOpen(isOpen: boolean) {
+    console.log(isOpen);
+    this.animateBack();
     this.openAlert = isOpen;
   }
 }
