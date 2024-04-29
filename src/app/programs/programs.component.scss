@@ -130,8 +130,12 @@ video {
   .badge {
     position: absolute;
     z-index: 99;
-    top: -5px;
-    right: 5px;
-    background-color: aqua;
+    top: -10px;
+    right: 0px;
+    background-color: transparent;
+    .icon {
+      font-size: 1.4rem;
+      color: green;
+    }
   }
 }

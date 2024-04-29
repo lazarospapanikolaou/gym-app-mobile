@@ -11,7 +11,9 @@
 <ion-content [fullscreen]="true">
   <ng-container *ngIf="!loading; else loadingTemplate">
     <div class="badge-card-div" *ngFor="let program of myPrograms">
-      <ion-badge class="badge" color="warning">70</ion-badge>
+      <ion-badge class="badge" color="warning">
+        <ion-icon class="icon" name="checkmark-circle-outline"></ion-icon>
+      </ion-badge>
       <ion-card class="ion-margin-bottom card">
         <ion-card-content
           class="ion-no-padding card-content"
