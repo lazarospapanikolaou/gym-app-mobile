@@ -124,17 +124,24 @@ video {
   height: 100%;
 }
 
-.card {
+.badge-card-div {
   position: relative;
+
+  .badge {
+    position: absolute;
+    z-index: 99;
+    top: -5px;
+    right: 5px;
+    background-color: aqua;
+  }
 }
 
-.card-content {
-  z-index: 1;
-}
+// .card {
+//   position: relative;
+//   z-index: 4;
+// }
 
-.badge {
-  position: absolute;
-  margin-top: -10px;
-  z-index: 1000;
-  background-color: aqua;
-}
+// .card-content {
+//   z-index: 5;
+//   position: relative;
+// }
