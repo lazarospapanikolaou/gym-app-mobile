@@ -123,15 +123,15 @@
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.html",
-        "hash": "9507880278146493966"
+        "hash": "6172992760267109557"
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.scss",
-        "hash": "12780211408467065811"
+        "hash": "17166268841558440347"
       },
       {
         "file": "src/app/components/slider-confirm/slider-confirm.component.ts",
-        "hash": "9376386845344054569"
+        "hash": "1699908452934705670"
       },
       {
         "file": "src/app/exercise/exercise.component.html",
@@ -207,15 +207,15 @@
       },
       {
         "file": "src/app/programs/programs.component.html",
-        "hash": "17227056640261476940"
+        "hash": "14717992889731955207"
       },
       {
         "file": "src/app/programs/programs.component.scss",
-        "hash": "2293963167569493255"
+        "hash": "10976124874388816492"
       },
       {
         "file": "src/app/programs/programs.component.ts",
-        "hash": "14871180731340832462"
+        "hash": "9639583313481994956"
       },
       {
         "file": "src/app/services/guards/auth.guard.ts",
@@ -280,6 +280,10 @@
       {
         "file": "src/assets/icon/favicon.png",
         "hash": "17482944836898362639"
+      },
+      {
+        "file": "src/assets/right-arrow-backup-2-svgrepo-com.svg",
+        "hash": "11199551991497861871"
       },
       {
         "file": "src/assets/shapes.svg",

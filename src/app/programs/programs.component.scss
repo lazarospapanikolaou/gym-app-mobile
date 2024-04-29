@@ -133,9 +133,8 @@ video {
 }
 
 .badge {
-  position: relative;
-  float: right;
+  position: absolute;
   margin-top: -10px;
-  margin-right: -10px;
   z-index: 1000;
+  background-color: aqua;
 }
