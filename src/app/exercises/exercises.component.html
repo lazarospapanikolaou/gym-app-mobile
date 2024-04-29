@@ -13,20 +13,22 @@
 </ion-header>
 
 <ion-content [fullscreen]="true">
-  <ng-container *ngIf="!loading; else loadingTemplate">
-    <ion-card *ngFor="let exercise of exercises" (click)="goToExercise(exercise.id)">
-      <ion-card-content>
-        <ion-grid>
-          <ion-row class="ion-justify-content-between">
-            <ion-col class="start">{{ exercise.title }}</ion-col>
-            <ion-col class="end">
-              <div>{{ exercise.estimatedTime }} m</div>
-            </ion-col>
-          </ion-row>
-        </ion-grid>
-      </ion-card-content>
-    </ion-card>
-  </ng-container>
+  <ion-card *ngFor="let exercise of exercises">
+    <ion-card-content class="ion-no-padding card-content">
+      <ion-accordion-group>
+        <ng-container *ngIf="!loading; else loadingTemplate">
+          <ion-accordion>
+            <ion-item slot="header" color="light">
+              <ion-label>{{ exercise.title }}</ion-label>
+            </ion-item>
+            <div class="ion-padding" slot="content">{{ exercise.description }}</div>
+            <div class="ion-padding" slot="content">{{ exercise.estimatedTime }} m</div>
+          </ion-accordion>
+        </ng-container>
+      </ion-accordion-group>
+    </ion-card-content>
+  </ion-card>
+
 </ion-content>
 
 <ng-template #loadingTemplate>

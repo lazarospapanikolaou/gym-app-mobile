@@ -15,7 +15,7 @@ import {
   IonRow,
   IonGrid,
   IonCard,
-  IonCardContent, IonSpinner } from '@ionic/angular/standalone';
+  IonCardContent, IonSpinner, IonAccordionGroup, IonAccordion, IonCardHeader, IonCardTitle } from '@ionic/angular/standalone';
 import { ExerciseComponent } from '../exercise/exercise.component';
 import { SliderConfirmComponent } from '../components/slider-confirm/slider-confirm.component';
 
@@ -24,7 +24,7 @@ import { SliderConfirmComponent } from '../components/slider-confirm/slider-conf
   templateUrl: './exercises.component.html',
   styleUrls: ['./exercises.component.scss'],
   standalone: true,
-  imports: [IonSpinner, 
+  imports: [IonCardTitle, IonCardHeader, IonAccordion, IonAccordionGroup, IonSpinner, 
     IonList,
     IonItem,
     IonLabel,
@@ -67,9 +67,9 @@ export class ExercisesComponent {
     this.loading = true;
     setTimeout(() => {
       this.exercises.push(
-        { id: 1, title: 'Biseps', estimatedTime: 20 },
-        { id: 2, title: 'Legs', estimatedTime: 30 },
-        { id: 3, title: 'Chest', estimatedTime: 40 }
+        { id: 1, title: 'Biseps', estimatedTime: 20, description: 'Train your arms today' },
+        { id: 2, title: 'Legs', estimatedTime: 30, description: 'Train your legs today ' },
+        { id: 3, title: 'Chest', estimatedTime: 40, description: 'Train your chest today' }
       );
   
       this.loading = false;
