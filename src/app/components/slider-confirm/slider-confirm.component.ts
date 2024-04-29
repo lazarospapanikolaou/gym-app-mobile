@@ -115,9 +115,7 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
     );
   }
 
-  ngOnInit() {
-    console.log(this.openAlert);
-  }
+  ngOnInit() {}
 
   submitLater(event: any) {}
 
@@ -212,8 +210,8 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
   };
 
   setOpen(isOpen: boolean) {
-    console.log(isOpen);
     this.animateBack();
+    this.currentX = 0;
     this.openAlert = isOpen;
   }
 }
