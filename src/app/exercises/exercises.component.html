@@ -21,11 +21,12 @@
             <ion-item slot="header" color="light">
               <ion-label>{{ exercise.title }}</ion-label>
               <ion-icon name="git-compare-outline"></ion-icon>
+              <div>{{ exercise.totalSets }}</div>
               <ion-icon name="play-circle-outline"></ion-icon>
               <ion-icon class="icon" name="checkmark-circle-outline"></ion-icon>
             </ion-item>
             <ion-item slot="header" color="light">
-              <ion-text>{{ exercise.title }}</ion-text>
+              <div>{{ exercise.maxReps }}-{{ exercise.maxReps }}-{{ exercise.maxReps }}-{{ exercise.maxReps }}-{{ exercise.maxReps }}</div>
             </ion-item>
             <div class="ion-padding" slot="content">{{ exercise.description }}</div>
             <div class="ion-padding" slot="content">{{ exercise.restTime }}s rest</div>

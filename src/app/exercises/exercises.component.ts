@@ -74,9 +74,9 @@ export class ExercisesComponent {
     this.loading = true;
     setTimeout(() => {
       this.exercises.push(
-        { id: 1, title: 'Seated Leg Curl', restTime: 20, description: 'Train your arms today' },
-        { id: 2, title: 'Lying Leg Curl', restTime: 30, description: 'Train your legs today ' },
-        { id: 3, title: 'Leg Press', restTime: 40, description: 'Train your chest today' }
+        { id: 1, title: 'Seated Leg Curl', restTime: 20, description: 'Train your arms today', totalSets: 5, maxReps: 10},
+        { id: 2, title: 'Lying Leg Curl', restTime: 30, description: 'Train your legs today ', totalSets: 4, maxReps: 8 },
+        { id: 3, title: 'Leg Press', restTime: 40, description: 'Train your chest today', totalSets: 5, maxReps: 12 }
       );
   
       this.loading = false;
