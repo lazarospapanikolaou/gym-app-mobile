@@ -158,7 +158,6 @@ class SliderConfirmComponent implements OnInit, AfterViewInit {
 
       if (e.type === 'touchmove') {
         this.currentX = e.touches[0].clientX - this.initialX;
-        console.log(this.currentX);
       } else {
         this.currentX = e.clientX - this.initialX;
       }
