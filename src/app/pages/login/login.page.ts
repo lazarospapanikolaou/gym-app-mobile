@@ -106,7 +106,7 @@ export class LoginPage implements OnInit {
             this.loginForm.reset();
             this.errors = undefined;
           } else {
-            console.log('Failed')
+            // console.log('Failed')
           }
         },
         error: (errors: any) => {
