@@ -11,18 +11,27 @@
 </ion-header>
 
 <ion-content [fullscreen]="true" class="ion-padding">
-<ng-container *ngIf="!loading; else loadingTemplate">
-  <ion-list lines="none">
-    <ion-list-header>
-      <ion-label size="medium">Settings</ion-label>
-    </ion-list-header>
-    <ion-button (click)="logout()" fill="clear">
-      <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>
-      <ion-label>logout</ion-label>
-    </ion-button>
-  </ion-list>
-</ng-container>
-
+  <ng-container *ngIf="!loading; else loadingTemplate">
+    <ion-list lines="none">
+      <ion-list-header>
+        <ion-label size="medium">Settings</ion-label>
+      </ion-list-header>
+      <ion-item>
+        <ion-toggle
+          (ionChange)="activatePopup()"
+          [checked]="isDarkTheme"
+          justify="space-between"
+          >Dark Theme</ion-toggle
+        >
+      </ion-item>
+      <ion-item>
+        <ion-button (click)="logout()" fill="clear">
+          <ion-icon name="log-out-outline" slot="icon-only"></ion-icon>
+          <ion-label>Logout</ion-label>
+        </ion-button>
+      </ion-item>
+    </ion-list>
+  </ng-container>
 </ion-content>
 
 <ng-template #loadingTemplate>
